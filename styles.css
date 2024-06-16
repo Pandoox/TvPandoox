@@ -19,8 +19,7 @@ header h1{
 header img{
     position: absolute;
     width: 100px;
-    left: 450px ;
-    right: 100;
+    padding-left: 120px;
 }
 
 main {
