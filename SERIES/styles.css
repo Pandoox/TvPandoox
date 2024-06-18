@@ -10,13 +10,13 @@ header {
     color: white;
     text-align: center;
     padding: 1rem 0;
+   
 }
-
-header h1 {
-    padding-top: 20px;
+header h1{
+   
+   padding-top: 20px;
 }
-
-header img {
+header img{
     position: absolute;
     width: 100px;
     padding-left: 120px;
@@ -29,14 +29,14 @@ main {
     padding: 2rem;
 }
 
-.movies {
+.tv-channels {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 }
 
-.movie {
+.channel {
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -47,49 +47,65 @@ main {
     transition: transform 0.2s;
 }
 
-.movie:hover {
+.channel:hover {
     transform: scale(1.05);
 }
 
-.movie img {
+.channel img {
     width: 100%;
     height: auto;
 }
 
-.movie p {
+.channel p {
     margin: 0;
     padding: 0.5rem;
     background-color: #333;
     color: white;
 }
-
-a {
+a{
     text-decoration: none;
 }
+nav ul li {
+    
+    display: inline;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+nav ul li a{
+    text-decoration:none;
+    color: #ffffff;
+}
+
+
 
 body {
     -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-    -khtml-user-select: none; /* Konqueror */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none;
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -khtml-user-select: none; /* Konqueror */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none;
 }
 
+/*habilita a seleção nos campos editaveis*/
 input, textarea {
     -webkit-touch-callout: initial; /* iOS Safari */
-    -webkit-user-select: text; /* Chrome/Safari/Opera */
-    -khtml-user-select: text; /* Konqueror */
-    -moz-user-select: text; /* Firefox */
-    -ms-user-select: text; /* Internet Explorer/Edge */
-    user-select: text;
+      -webkit-user-select: text; /* Chrome/Safari/Opera */
+       -khtml-user-select: text; /* Konqueror */
+         -moz-user-select: text; /* Firefox */
+          -ms-user-select: text; /* Internet Explorer/Edge */
+              user-select: text;
 }
 
+/*habilita a seleção nos campos com o atributo contenteditable*/
 [contenteditable=true] {
     -webkit-touch-callout: initial; /* iOS Safari */
-    -webkit-user-select: all; /* Chrome/Safari/Opera */
-    -khtml-user-select: all; /* Konqueror */
-    -moz-user-select: all; /* Firefox */
-    -ms-user-select: all; /* Internet Explorer/Edge */
-    user-select: all;
+      -webkit-user-select: all; /* Chrome/Safari/Opera */
+       -khtml-user-select: all; /* Konqueror */
+         -moz-user-select: all; /* Firefox */
+          -ms-user-select: all; /* Internet Explorer/Edge */
+              user-select: all;
 }
