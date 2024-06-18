@@ -62,6 +62,9 @@ main {
     background-color: #333;
     color: white;
 }
+a{
+    text-decoration: none;
+}
 
 body {
     -webkit-touch-callout: none; /* iOS Safari */
