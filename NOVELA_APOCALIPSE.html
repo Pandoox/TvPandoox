@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novela Apocalipse</title>
+    <link rel="shortcut icon" type="image/png" href="img/television.png"/>
+    <script src="script.js"></script>
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #272727;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            
+        }
+        .video-container {
+            margin-top: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        button {
+            
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #2e2e2e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #3f3f3f;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            display: none;
+        }
+        iframe.active {
+            display: block;
+        }
+        h1 {
+            color: aliceblue;
+        }
+       
+        a{
+            text-decoration: none;
+        }
+        nav ul li {
+    
+            display: inline;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color: #00c6f7;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <nav>
+        <ul>
+        <li><a href="index_novela.html">VOLTAR PARA LISTA DE NOVELAS</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    
+        <div class="video-container">
+            <iframe id="capitulo1" src="https://ok.ru/videoembed/394515581527" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo2" src="https://ok.ru/videoembed/395054877271" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo3" src="https://ok.ru/videoembed/397207800407" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo4" src="https://ok.ru/videoembed/399101135447" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo5" src="https://ok.ru/videoembed/407648275031" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo6" src="https://ok.ru/videoembed/408186128983" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo7" src="https://ok.ru/videoembed/408334240343" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo8" src="https://ok.ru/videoembed/408947460695" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo9" src="https://ok.ru/videoembed/409754602071" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo10" src="https://ok.ru/videoembed/411273267799" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo11" src="https://ok.ru/videoembed/412343274071" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo12" src="https://ok.ru/videoembed/412555610711" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo13" src="https://ok.ru/videoembed/413617162839" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo14" src="https://ok.ru/videoembed/414187653719" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo15" src="https://ok.ru/videoembed/416921619031" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo16" src="https://ok.ru/videoembed/418015021655" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo17" src="https://ok.ru/videoembed/417887160919" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo18" src="https://ok.ru/videoembed/420105030231" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo19" src="https://ok.ru/videoembed/421278517847" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo20" src="https://ok.ru/videoembed/441692326487" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo21" src="https://ok.ru/videoembed/444247247447" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo22" src="https://ok.ru/videoembed/445645589079" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo23" src="https://ok.ru/videoembed/445651356247" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo24" src="https://ok.ru/videoembed/446632495703" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo25" src="https://ok.ru/videoembed/452462774871" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo26" src="https://ok.ru/videoembed/454058707543" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo27" src="https://ok.ru/videoembed/457211120215" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo28" src="https://ok.ru/videoembed/457576811095" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo29" src="https://ok.ru/videoembed/458122398295" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo30" src="https://ok.ru/videoembed/465411639895" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo31" src="https://ok.ru/videoembed/465735649879" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo32" src="https://ok.ru/videoembed/466444094039" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo33" src="https://ok.ru/videoembed/468816300631" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo34" src="https://ok.ru/videoembed/471913859671" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo35" src="https://ok.ru/videoembed/503595272791" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo36" src="https://ok.ru/videoembed/504786455127" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo37" src="https://ok.ru/videoembed/507735771735" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo38" src="https://ok.ru/videoembed/515099724375" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo39" src="https://ok.ru/videoembed/516314761815" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo40" src="https://ok.ru/videoembed/523862215255" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo41" src="https://ok.ru/videoembed/526024247895" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo42" src="https://ok.ru/videoembed/527416560215" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo43" src="https://ok.ru/videoembed/528262498903" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo44" src="https://ok.ru/videoembed/529396730455" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo45" src="https://ok.ru/videoembed/538073762391" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo46" src="https://ok.ru/videoembed/541022685783" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo47" src="https://ok.ru/videoembed/542524443223" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo48" src="https://ok.ru/videoembed/549099407959" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo49" src="https://ok.ru/videoembed/557703170647" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo50" src="https://ok.ru/videoembed/563916638807" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo51" src="https://ok.ru/videoembed/565378943575" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo52" src="https://ok.ru/videoembed/566869166679" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo53" src="https://ok.ru/videoembed/571180190295" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo54" src="https://ok.ru/videoembed/580667443799" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo55" src="https://ok.ru/videoembed/608969362007" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo56" src="https://ok.ru/videoembed/610000374359" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo57" src="https://ok.ru/videoembed/611834333783" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo58" src="https://ok.ru/videoembed/618304309847" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo59" src="https://ok.ru/videoembed/621102303831" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo60" src="https://ok.ru/videoembed/631808002647" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo61" src="https://ok.ru/videoembed/635838728791" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo62" src="https://ok.ru/videoembed/640050203223" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo63" src="https://ok.ru/videoembed/654851115607" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo64" src="https://ok.ru/videoembed/656401697367" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo65" src="https://ok.ru/videoembed/664885463639" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo66" src="https://ok.ru/videoembed/668871428695" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo67" src="https://ok.ru/videoembed/672403098199" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo68" src="https://ok.ru/videoembed/676846045783" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo69" src="https://ok.ru/videoembed/678639897175" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo70" src="https://ok.ru/videoembed/686836615767" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo71" src="https://ok.ru/videoembed/688161294935" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo72" src="https://ok.ru/videoembed/689574185559" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo73" src="https://ok.ru/videoembed/692048759383" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo74" src="https://ok.ru/videoembed/693856701015" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo75" src="https://ok.ru/videoembed/702050273879" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo76" src="https://ok.ru/videoembed/702067051095" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo77" src="https://ok.ru/videoembed/706514848343" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo78" src="https://ok.ru/videoembed/707853027927" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo79" src="https://ok.ru/videoembed/710047500887" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo80" src="https://ok.ru/videoembed/715330685527" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo81" src="https://ok.ru/videoembed/715447667287" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo82" src="https://ok.ru/videoembed/729354668631" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo83" src="https://ok.ru/videoembed/729360108119" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo84" src="https://ok.ru/videoembed/729364957783" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo85" src="https://ok.ru/videoembed/734110550615" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo86" src="https://ok.ru/videoembed/735099685463" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo87" src="https://ok.ru/videoembed/744121698903" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo88" src="https://ok.ru/videoembed/752357608023" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo89" src="https://ok.ru/videoembed/761250253399" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo90" src="https://ok.ru/videoembed/771286043223" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo91" src="https://ok.ru/videoembed/780350655063" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo92" src="https://ok.ru/videoembed/781662751319" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo93" src="https://ok.ru/videoembed/782683474519" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo94" src="https://ok.ru/videoembed/783345715799" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo95" src="https://ok.ru/videoembed/815409662551" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo96" src="https://ok.ru/videoembed/815410186839" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo97" src="https://ok.ru/videoembed/815420213847" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo98" src="https://ok.ru/videoembed/815421655639" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo99" src="https://ok.ru/videoembed/815424211543" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo100" src="https://ok.ru/videoembed/815713487447" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo101" src="https://ok.ru/videoembed/815714077271" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo102" src="https://ok.ru/videoembed/815729936983" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo103" src="https://ok.ru/videoembed/815731247703" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo104" src="https://ok.ru/videoembed/815744485975" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo105" src="https://ok.ru/videoembed/817491806807" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo106" src="https://ok.ru/videoembed/817847339607" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo107" src="https://ok.ru/videoembed/818175740503" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo108" src="https://ok.ru/videoembed/820223806039" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo109" src="https://ok.ru/videoembed/820224264791" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo110" src="https://ok.ru/videoembed/822180579927" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo111" src="https://ok.ru/videoembed/822988835415" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo112" src="https://ok.ru/videoembed/823749904983" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo113" src="https://ok.ru/videoembed/824655546967" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo114" src="https://ok.ru/videoembed/825564990039" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo115" src="https://ok.ru/videoembed/828060797527" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo116" src="https://ok.ru/videoembed/828061190743" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo117" src="https://ok.ru/videoembed/829285075543" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo118" src="https://ok.ru/videoembed/829914942039" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo119" src="https://ok.ru/videoembed/830256974423" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo120" src="https://ok.ru/videoembed/834639563351" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo121" src="https://ok.ru/videoembed/835302459991" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo122" src="https://ok.ru/videoembed/835463023191" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo123" src="https://ok.ru/videoembed/836136471127" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo124" src="https://ok.ru/videoembed/836774398551" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo125" src="https://ok.ru/videoembed/841206270551" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo126" src="https://ok.ru/videoembed/842086222423" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo127" src="https://ok.ru/videoembed/842628467287" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo128" src="https://ok.ru/videoembed/844192156247" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo129" src="https://ok.ru/videoembed/844211161687" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo130" src="https://ok.ru/videoembed/847446542935" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo131" src="https://ok.ru/videoembed/847674411607" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo132" src="https://ok.ru/videoembed/847921023575" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo133" src="https://ok.ru/videoembed/847979350615" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo134" src="https://ok.ru/videoembed/849293740631" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo135" src="https://ok.ru/videoembed/852056083031" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo136" src="https://ok.ru/videoembed/853304019543" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo137" src="https://ok.ru/videoembed/853327809111" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo138" src="https://ok.ru/videoembed/853360773719" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo139" src="https://ok.ru/videoembed/1415618562783" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo140" src="https://ok.ru/videoembed/856464165463" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo141" src="https://ok.ru/videoembed/857056348759" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo142" src="https://ok.ru/videoembed/858584975959" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo143" src="https://ok.ru/videoembed/858585238103" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo144" src="https://ok.ru/videoembed/859623918167" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo145" src="https://ok.ru/videoembed/862637722199" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo146" src="https://ok.ru/videoembed/862638443095" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo147" src="https://ok.ru/videoembed/862638377559" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo148" src="https://ok.ru/videoembed/864850086487" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo149" src="https://ok.ru/videoembed/864850479703" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo150" src="https://ok.ru/videoembed/866274839127" frameborder="0" allowfullscreen></iframe>
+
+            <iframe id="capitulo151" src="https://ok.ru/videoembed/866423736919" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo152" src="https://ok.ru/videoembed/866940029527" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo153" src="https://ok.ru/videoembed/868109191767" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo154" src="https://ok.ru/videoembed/868658121303" frameborder="0" allowfullscreen></iframe>
+            <iframe id="capitulo155" src="https://ok.ru/videoembed/870316837463" frameborder="0" allowfullscreen></iframe>
+            
+        </div>
+    
+    
+        <h1>Novela Apocalipse - Capítulos</h1>
+
+        <div class="buttons">
+            <button onclick="showVideo('capitulo1')">Capítulo 1</button>
+            <button onclick="showVideo('capitulo2')">Capítulo 2</button>
+            <button onclick="showVideo('capitulo3')">Capítulo 3</button>
+            <button onclick="showVideo('capitulo4')">Capítulo 4</button>
+            <button onclick="showVideo('capitulo5')">Capítulo 5</button>
+            <button onclick="showVideo('capitulo6')">Capítulo 6</button>
+            <button onclick="showVideo('capitulo7')">Capítulo 7</button>
+            <button onclick="showVideo('capitulo8')">Capítulo 8</button>
+            <button onclick="showVideo('capitulo9')">Capítulo 9</button>
+            <button onclick="showVideo('capitulo10')">Capítulo 10</button>
+
+            <button onclick="showVideo('capitulo11')">Capítulo 11</button>
+            <button onclick="showVideo('capitulo12')">Capítulo 12</button>
+            <button onclick="showVideo('capitulo13')">Capítulo 13</button>
+            <button onclick="showVideo('capitulo14')">Capítulo 14</button>
+            <button onclick="showVideo('capitulo15')">Capítulo 15</button>
+            <button onclick="showVideo('capitulo16')">Capítulo 16</button>
+            <button onclick="showVideo('capitulo17')">Capítulo 17</button>
+            <button onclick="showVideo('capitulo18')">Capítulo 18</button>
+            <button onclick="showVideo('capitulo19')">Capítulo 19</button>
+            <button onclick="showVideo('capitulo20')">Capítulo 20</button>
+
+            <button onclick="showVideo('capitulo21')">Capítulo 21</button>
+            <button onclick="showVideo('capitulo22')">Capítulo 22</button>
+            <button onclick="showVideo('capitulo23')">Capítulo 23</button>
+            <button onclick="showVideo('capitulo24')">Capítulo 24</button>
+            <button onclick="showVideo('capitulo25')">Capítulo 25</button>
+            <button onclick="showVideo('capitulo26')">Capítulo 26</button>
+            <button onclick="showVideo('capitulo27')">Capítulo 27</button>
+            <button onclick="showVideo('capitulo28')">Capítulo 28</button>
+            <button onclick="showVideo('capitulo29')">Capítulo 29</button>
+            <button onclick="showVideo('capitulo30')">Capítulo 30</button>
+
+            <button onclick="showVideo('capitulo31')">Capítulo 31</button>
+            <button onclick="showVideo('capitulo32')">Capítulo 32</button>
+            <button onclick="showVideo('capitulo33')">Capítulo 33</button>
+            <button onclick="showVideo('capitulo34')">Capítulo 34</button>
+            <button onclick="showVideo('capitulo35')">Capítulo 35</button>
+            <button onclick="showVideo('capitulo36')">Capítulo 36</button>
+            <button onclick="showVideo('capitulo37')">Capítulo 37</button>
+            <button onclick="showVideo('capitulo38')">Capítulo 38</button>
+            <button onclick="showVideo('capitulo39')">Capítulo 39</button>
+            <button onclick="showVideo('capitulo40')">Capítulo 40</button>
+
+            <button onclick="showVideo('capitulo41')">Capítulo 41</button>
+            <button onclick="showVideo('capitulo42')">Capítulo 42</button>
+            <button onclick="showVideo('capitulo43')">Capítulo 43</button>
+            <button onclick="showVideo('capitulo44')">Capítulo 44</button>
+            <button onclick="showVideo('capitulo45')">Capítulo 45</button>
+            <button onclick="showVideo('capitulo46')">Capítulo 46</button>
+            <button onclick="showVideo('capitulo47')">Capítulo 47</button>
+            <button onclick="showVideo('capitulo48')">Capítulo 48</button>
+            <button onclick="showVideo('capitulo49')">Capítulo 49</button>
+            <button onclick="showVideo('capitulo50')">Capítulo 50</button>
+
+            <button onclick="showVideo('capitulo51')">Capítulo 51</button>
+            <button onclick="showVideo('capitulo52')">Capítulo 52</button>
+            <button onclick="showVideo('capitulo53')">Capítulo 53</button>
+            <button onclick="showVideo('capitulo54')">Capítulo 54</button>
+            <button onclick="showVideo('capitulo55')">Capítulo 55</button>
+            <button onclick="showVideo('capitulo56')">Capítulo 56</button>
+            <button onclick="showVideo('capitulo57')">Capítulo 57</button>
+            <button onclick="showVideo('capitulo58')">Capítulo 58</button>
+            <button onclick="showVideo('capitulo59')">Capítulo 59</button>
+            <button onclick="showVideo('capitulo60')">Capítulo 60</button>
+
+            <button onclick="showVideo('capitulo61')">Capítulo 61</button>
+            <button onclick="showVideo('capitulo62')">Capítulo 62</button>
+            <button onclick="showVideo('capitulo63')">Capítulo 63</button>
+            <button onclick="showVideo('capitulo64')">Capítulo 64</button>
+            <button onclick="showVideo('capitulo65')">Capítulo 65</button>
+            <button onclick="showVideo('capitulo66')">Capítulo 66</button>
+            <button onclick="showVideo('capitulo67')">Capítulo 67</button>
+            <button onclick="showVideo('capitulo68')">Capítulo 68</button>
+            <button onclick="showVideo('capitulo69')">Capítulo 69</button>
+            <button onclick="showVideo('capitulo70')">Capítulo 70</button>
+
+            <button onclick="showVideo('capitulo71')">Capítulo 71</button>
+            <button onclick="showVideo('capitulo72')">Capítulo 72</button>
+            <button onclick="showVideo('capitulo73')">Capítulo 73</button>
+            <button onclick="showVideo('capitulo74')">Capítulo 74</button>
+            <button onclick="showVideo('capitulo75')">Capítulo 75</button>
+            <button onclick="showVideo('capitulo76')">Capítulo 76</button>
+            <button onclick="showVideo('capitulo77')">Capítulo 77</button>
+            <button onclick="showVideo('capitulo78')">Capítulo 78</button>
+            <button onclick="showVideo('capitulo79')">Capítulo 79</button>
+            <button onclick="showVideo('capitulo80')">Capítulo 80</button>
+
+            <button onclick="showVideo('capitulo81')">Capítulo 81</button>
+            <button onclick="showVideo('capitulo82')">Capítulo 82</button>
+            <button onclick="showVideo('capitulo83')">Capítulo 83</button>
+            <button onclick="showVideo('capitulo84')">Capítulo 84</button>
+            <button onclick="showVideo('capitulo85')">Capítulo 85</button>
+            <button onclick="showVideo('capitulo86')">Capítulo 86</button>
+            <button onclick="showVideo('capitulo87')">Capítulo 87</button>
+            <button onclick="showVideo('capitulo88')">Capítulo 88</button>
+            <button onclick="showVideo('capitulo89')">Capítulo 89</button>
+            <button onclick="showVideo('capitulo90')">Capítulo 90</button>
+
+            <button onclick="showVideo('capitulo91')">Capítulo 91</button>
+            <button onclick="showVideo('capitulo92')">Capítulo 92</button>
+            <button onclick="showVideo('capitulo93')">Capítulo 93</button>
+            <button onclick="showVideo('capitulo94')">Capítulo 94</button>
+            <button onclick="showVideo('capitulo95')">Capítulo 95</button>
+            <button onclick="showVideo('capitulo96')">Capítulo 96</button>
+            <button onclick="showVideo('capitulo97')">Capítulo 97</button>
+            <button onclick="showVideo('capitulo98')">Capítulo 98</button>
+            <button onclick="showVideo('capitulo99')">Capítulo 99</button>
+            <button onclick="showVideo('capitulo100')">Capítulo 100</button>
+
+            <button onclick="showVideo('capitulo101')">Capítulo 101</button>
+            <button onclick="showVideo('capitulo102')">Capítulo 102</button>
+            <button onclick="showVideo('capitulo103')">Capítulo 103</button>
+            <button onclick="showVideo('capitulo104')">Capítulo 104</button>
+            <button onclick="showVideo('capitulo105')">Capítulo 105</button>
+            <button onclick="showVideo('capitulo106')">Capítulo 106</button>
+            <button onclick="showVideo('capitulo107')">Capítulo 107</button>
+            <button onclick="showVideo('capitulo108')">Capítulo 108</button>
+            <button onclick="showVideo('capitulo109')">Capítulo 109</button>
+            <button onclick="showVideo('capitulo110')">Capítulo 110</button>
+
+            <button onclick="showVideo('capitulo111')">Capítulo 111</button>
+            <button onclick="showVideo('capitulo112')">Capítulo 112</button>
+            <button onclick="showVideo('capitulo113')">Capítulo 113</button>
+            <button onclick="showVideo('capitulo114')">Capítulo 114</button>
+            <button onclick="showVideo('capitulo115')">Capítulo 115</button>
+            <button onclick="showVideo('capitulo116')">Capítulo 116</button>
+            <button onclick="showVideo('capitulo117')">Capítulo 117</button>
+            <button onclick="showVideo('capitulo118')">Capítulo 118</button>
+            <button onclick="showVideo('capitulo119')">Capítulo 119</button>
+            <button onclick="showVideo('capitulo120')">Capítulo 120</button>
+
+            <button onclick="showVideo('capitulo121')">Capítulo 121</button>
+            <button onclick="showVideo('capitulo122')">Capítulo 122</button>
+            <button onclick="showVideo('capitulo123')">Capítulo 123</button>
+            <button onclick="showVideo('capitulo124')">Capítulo 124</button>
+            <button onclick="showVideo('capitulo125')">Capítulo 125</button>
+            <button onclick="showVideo('capitulo126')">Capítulo 126</button>
+            <button onclick="showVideo('capitulo127')">Capítulo 127</button>
+            <button onclick="showVideo('capitulo128')">Capítulo 128</button>
+            <button onclick="showVideo('capitulo129')">Capítulo 129</button>
+            <button onclick="showVideo('capitulo130')">Capítulo 130</button>
+
+            <button onclick="showVideo('capitulo131')">Capítulo 131</button>
+            <button onclick="showVideo('capitulo132')">Capítulo 132</button>
+            <button onclick="showVideo('capitulo133')">Capítulo 133</button>
+            <button onclick="showVideo('capitulo134')">Capítulo 134</button>
+            <button onclick="showVideo('capitulo135')">Capítulo 135</button>
+            <button onclick="showVideo('capitulo136')">Capítulo 136</button>
+            <button onclick="showVideo('capitulo137')">Capítulo 137</button>
+            <button onclick="showVideo('capitulo138')">Capítulo 138</button>
+            <button onclick="showVideo('capitulo139')">Capítulo 139</button>
+            <button onclick="showVideo('capitulo140')">Capítulo 140</button>
+
+            <button onclick="showVideo('capitulo141')">Capítulo 141</button>
+            <button onclick="showVideo('capitulo142')">Capítulo 142</button>
+            <button onclick="showVideo('capitulo143')">Capítulo 143</button>
+            <button onclick="showVideo('capitulo144')">Capítulo 144</button>
+            <button onclick="showVideo('capitulo145')">Capítulo 145</button>
+            <button onclick="showVideo('capitulo146')">Capítulo 146</button>
+            <button onclick="showVideo('capitulo147')">Capítulo 147</button>
+            <button onclick="showVideo('capitulo148')">Capítulo 148</button>
+            <button onclick="showVideo('capitulo149')">Capítulo 149</button>
+            <button onclick="showVideo('capitulo150')">Capítulo 150</button>
+
+            <button onclick="showVideo('capitulo151')">Capítulo 151</button>
+            <button onclick="showVideo('capitulo152')">Capítulo 152</button>
+            <button onclick="showVideo('capitulo153')">Capítulo 153</button>
+            <button onclick="showVideo('capitulo154')">Capítulo 154</button>
+            <button onclick="showVideo('capitulo155')">Capítulo 155</button>
+            
+        </div>
+    
+    </div>
+
+    <script>
+        function showVideo(chapterId) {
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                if (iframe.id === chapterId) {
+                    iframe.classList.add('active');
+                } else {
+                    iframe.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
