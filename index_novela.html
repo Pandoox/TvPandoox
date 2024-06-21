@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVELAS</title>
+    
+    <link rel="shortcut icon" type="image/png" href="img/television.png"/>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+   
+}
+header h1{
+    color: white;
+   padding-top: 20px;
+}
+header img{
+    position: absolute;
+    width: 100px;
+    padding-left: 120px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.tv-channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.channel {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    
+}
+
+.channel:hover {
+    transform: scale(1.05);
+}
+
+.channel img {
+    width: 100%;
+    height: auto;
+}
+
+.channel p {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+nav ul li {
+    
+    display: inline;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+nav ul li a{
+    text-decoration:none;
+    color: #00c6f7;
+}
+
+
+
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -khtml-user-select: none; /* Konqueror */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none;
+}
+
+/*habilita a seleção nos campos editaveis*/
+input, textarea {
+    -webkit-touch-callout: initial; /* iOS Safari */
+      -webkit-user-select: text; /* Chrome/Safari/Opera */
+       -khtml-user-select: text; /* Konqueror */
+         -moz-user-select: text; /* Firefox */
+          -ms-user-select: text; /* Internet Explorer/Edge */
+              user-select: text;
+}
+
+/*habilita a seleção nos campos com o atributo contenteditable*/
+[contenteditable=true] {
+    -webkit-touch-callout: initial; /* iOS Safari */
+      -webkit-user-select: all; /* Chrome/Safari/Opera */
+       -khtml-user-select: all; /* Konqueror */
+         -moz-user-select: all; /* Firefox */
+          -ms-user-select: all; /* Internet Explorer/Edge */
+              user-select: all;
+}
+.development-message{
+    width: 1000px;
+    color: #ffffff;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+ 
+
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #555;
+}
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+.container {
+  text-align: center;
+}
+a button{
+    margin-bottom: 1rem;
+    padding: 1rem 2rem; /* Aumenta o tamanho do botão */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    cursor: pointer;
+    background-color: #ff4c4c; /* Define a cor de fundo avermelhada */
+    color: white; /* Define a cor do texto como branca */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+    position:absolute;
+    right: 250px;
+    align-items: center;
+    
+}
+a button:hover{
+    
+    background-color: #ff1a1a; /* Altera a cor de fundo ao passar o mouse */
+    
+
+}
+
+</style>   
+    
+</head>
+<body>
+    <header>
+        <a href="index_novela.html"><img src="img/television.png"></a>
+        <h1>NOVELAS</h1>
+        <br>
+        <nav>
+            <ul>
+              <li><a href="index.html">TV_PANDOOX</a></li>
+              <li><a href="inde_filme.html">FILMES</a></li>
+              <li><a href="indexSerie.html">SERIES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="tvChannels" class="tv-channels">
+            <div class="channel">
+                <a href="#" onclick="showEpisodes('apocalipse')">
+                    <img src="img_nov/NOV_APOCALIPSE.png">
+                    <p>Novela Apocalipse - 2017</p>
+                </a>
+            </div>
+            <div class="channel">
+                <a href="#" onclick="showEpisodes('reis')">
+                    <img src="img_nov/NOV_MINIREIS.jpg">
+                    <p>Novela Reis - 2015 (Mini Serie)</p>
+                </a>
+            </div>
+         
+        </section>
+
+        <div class="container">
+            <h1 id="seriesTitle"></h1>
+            <div class="videoContainer" id="videoContainer" style="display: none;">
+                <a href='index_novela.html'><button>Voltar Para Novelas</button></a>
+                <iframe id="videoPlayer" class="videoPlayer" src="" width="840" height="600" frameborder="0" scrolling="no" allow="encrypted-media" allowfullscreen></iframe>
+                
+            </div>
+            
+            <div id="episodeButtons" class="buttons"></div>
+            
+        </div>    
+    </main>
+
+
+
+    <script>
+
+    function showEpisodes(series) {
+    const seriesTitle = document.getElementById('seriesTitle');
+    const episodeButtons = document.getElementById('episodeButtons');
+    const videoContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+    const tvChannels = document.getElementById('tvChannels');
+
+    // Hide the TV channels section
+    tvChannels.style.display = 'none';
+
+    // Reset the video player and buttons
+    seriesTitle.textContent = '';
+    episodeButtons.innerHTML = '';
+    videoPlayer.src = '';
+    videoContainer.style.display = 'none';
+
+    // Set the title and buttons based on the selected series
+    if (series === 'apocalipse') {
+        seriesTitle.textContent = 'Novela Apocalipse - Capítulos';
+        episodeButtons.innerHTML = `
+            <button onclick="showVideo('https://ok.ru/videoembed/394515581527')">Capítulo 1</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/395054877271')">Capítulo 2</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/397207800407')">Capítulo 3</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/399101135447')">Capítulo 4</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/407648275031')">Capítulo 5</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/408186128983')">Capítulo 6</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/408334240343')">Capítulo 7</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/408947460695')">Capítulo 8</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/409754602071')">Capítulo 9</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/411273267799')">Capítulo 10</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/412343274071')">Capítulo 11</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/412555610711')">Capítulo 12</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/413617162839')">Capítulo 13</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/414187653719')">Capítulo 14</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/416921619031')">Capítulo 15</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/418015021655')">Capítulo 16</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/417887160919')">Capítulo 17</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/420105030231')">Capítulo 18</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/421278517847')">Capítulo 19</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/441692326487')">Capítulo 20</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/444247247447')">Capítulo 21</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/445645589079')">Capítulo 22</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/445651356247')">Capítulo 23</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/446632495703')">Capítulo 24</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/452462774871')">Capítulo 25</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/454058707543')">Capítulo 26</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/457211120215')">Capítulo 27</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/457576811095')">Capítulo 28</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/458122398295')">Capítulo 29</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/465411639895')">Capítulo 30</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/465735649879')">Capítulo 31</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/466444094039')">Capítulo 32</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/468816300631')">Capítulo 33</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/471913859671')">Capítulo 34</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/503595272791')">Capítulo 35</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/504786455127')">Capítulo 36</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/507735771735')">Capítulo 37</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/515099724375')">Capítulo 38</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/516314761815')">Capítulo 39</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/523862215255')">Capítulo 40</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/526024247895')">Capítulo 41</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/527416560215')">Capítulo 42</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/528262498903')">Capítulo 43</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/529396730455')">Capítulo 44</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/538073762391')">Capítulo 45</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/541022685783')">Capítulo 46</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/542524443223')">Capítulo 47</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/549099407959')">Capítulo 48</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/557703170647')">Capítulo 49</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/563916638807')">Capítulo 50</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/565378943575')">Capítulo 51</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/566869166679')">Capítulo 52</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/571180190295')">Capítulo 53</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/580667443799')">Capítulo 54</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/608969362007')">Capítulo 55</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/610000374359')">Capítulo 56</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/611834333783')">Capítulo 57</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/618304309847')">Capítulo 58</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/621102303831')">Capítulo 59</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/631808002647')">Capítulo 60</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/635838728791')">Capítulo 61</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/640050203223')">Capítulo 62</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/654851115607')">Capítulo 63</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/656401697367')">Capítulo 64</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/664885463639')">Capítulo 65</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/668871428695')">Capítulo 66</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/672403098199')">Capítulo 67</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/676846045783')">Capítulo 68</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/678639897175')">Capítulo 69</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/686836615767')">Capítulo 70</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/688161294935')">Capítulo 71</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/689574185559')">Capítulo 72</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/692048759383')">Capítulo 73</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/693856701015')">Capítulo 74</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/702050273879')">Capítulo 75</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/702067051095')">Capítulo 76</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/706514848343')">Capítulo 77</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/707853027927')">Capítulo 78</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/710047500887')">Capítulo 79</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/715330685527')">Capítulo 80</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/715447667287')">Capítulo 81</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/729354668631')">Capítulo 82</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/729360108119')">Capítulo 83</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/729364957783')">Capítulo 84</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/734110550615')">Capítulo 85</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/735099685463')">Capítulo 86</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/744121698903')">Capítulo 87</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/752357608023')">Capítulo 88</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/761250253399')">Capítulo 89</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/771286043223')">Capítulo 90</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/780350655063')">Capítulo 91</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/781662751319')">Capítulo 92</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/782683474519')">Capítulo 93</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/783345715799')">Capítulo 94</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815409662551')">Capítulo 95</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815410186839')">Capítulo 96</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815420213847')">Capítulo 97</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815421655639')">Capítulo 98</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815424211543')">Capítulo 99</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815713487447')">Capítulo 100</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/815714077271')">Capítulo 101</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815729936983')">Capítulo 102</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815731247703')">Capítulo 103</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/815744485975')">Capítulo 104</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/817491806807')">Capítulo 105</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/817847339607')">Capítulo 106</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/818175740503')">Capítulo 107</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/820223806039')">Capítulo 108</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/820224264791')">Capítulo 109</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/822180579927')">Capítulo 110</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/822988835415')">Capítulo 111</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/823749904983')">Capítulo 112</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/824655546967')">Capítulo 113</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/825564990039')">Capítulo 114</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/828060797527')">Capítulo 115</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/828061190743')">Capítulo 116</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/829285075543')">Capítulo 117</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/829914942039')">Capítulo 118</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/830256974423')">Capítulo 119</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/834639563351')">Capítulo 120</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/835302459991')">Capítulo 121</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/835463023191')">Capítulo 122</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/836136471127')">Capítulo 123</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/836774398551')">Capítulo 124</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/841206270551')">Capítulo 125</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/842086222423')">Capítulo 126</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/842628467287')">Capítulo 127</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/844192156247')">Capítulo 128</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/844211161687')">Capítulo 129</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/847446542935')">Capítulo 130</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/847674411607')">Capítulo 131</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/847921023575')">Capítulo 132</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/847979350615')">Capítulo 133</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/849293740631')">Capítulo 134</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/852056083031')">Capítulo 135</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/853304019543')">Capítulo 136</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/853327809111')">Capítulo 137</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/853360773719')">Capítulo 138</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/1415618562783')">Capítulo 139</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/856464165463')">Capítulo 140</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/857056348759')">Capítulo 141</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/858584975959')">Capítulo 142</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/858585238103')">Capítulo 143</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/859623918167')">Capítulo 144</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/862637722199')">Capítulo 145</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/862638443095')">Capítulo 146</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/862638377559')">Capítulo 147</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/864850086487')">Capítulo 148</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/864850479703')">Capítulo 149</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/866274839127')">Capítulo 150</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/866423736919')">Capítulo 151</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/866940029527')">Capítulo 152</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/868109191767')">Capítulo 153</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/868658121303')">Capítulo 154</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/870316837463')">Capítulo 155</button>
+
+
+        `;
+    } else if (series === 'reis') {
+        seriesTitle.textContent = 'Novela Reis (Mini Serie) - Capítulos';
+        episodeButtons.innerHTML = `
+            <button onclick="showVideo('https://ok.ru/videoembed/35253979735')">Capítulo 1</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36053453399')">Capítulo 2</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36028090967')">Capítulo 3</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/993155353302')">Capítulo 4</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/409677597398')">Capítulo 5</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36068461143')">Capítulo 6</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36112042583')">Capítulo 7</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36062956119')">Capítulo 8</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36132162135')">Capítulo 9</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36203661911')">Capítulo 10</button>
+
+            <button onclick="showVideo('https://ok.ru/videoembed/36229417559')">Capítulo 11</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36159490647')">Capítulo 12</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36229614167')">Capítulo 13</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36211853911')">Capítulo 14</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36205103703')">Capítulo 15</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36205103703')">Capítulo 16</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36346333783')">Capítulo 17</button>
+            <button onclick="showVideo('https://ok.ru/videoembed/36353215063')">Capítulo 18</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/36458400343')">Capítulo 19</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/449461881558')">Capítulo 20</button>
+
+            <button onclick="showVideo('https://www.ok.ru/videoembed/449467189974')">Capítulo 21</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/456153041622')">Capítulo 22</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/456153434838')">Capítulo 23</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/456153631446')">Capítulo 24</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/456153893590')">Capítulo 25</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/466857691862')">Capítulo 26</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/466961238742')">Capítulo 27</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/467027823318')">Capítulo 28</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/478711057110')">Capítulo 29</button>
+            <button onclick="showVideo('https://www.ok.ru/videoembed/478713875158')">Capítulo 30</button>
+        `;
+    }
+
+    // Show the video container
+    videoContainer.style.display = 'block';
+}
+
+
+function showVideo(url) {
+    const videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.src = url;
+
+    document.querySelectorAll('.channel').forEach(channel => {
+                channel.style.display = 'none';
+            });
+            document.getElementById('videoContainer').style.display = 'block';
+            document.getElementById('videoPlayer').src = Url;
+        
+
+}
+
+
+
+//function hidePlayer() {
+  //  const playerContainer = document.getElementById('videoContainer');
+    //const player = document.getElementById('videoPlayer');
+    //player.src = '';
+    //playerContainer.style.display = 'none';
+//}
+
+
+if (document.addEventListener) {
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        return false;
+    });
+} else { //Versões antigas do IE
+    document.attachEvent("oncontextmenu", function(e) {
+        e = e || window.event;
+        e.returnValue = false;
+        return false;
+    });
+}
+if (document.addEventListener) {
+    document.addEventListener("keydown", bloquearSource);
+} else { //Versões antigas do IE
+    document.attachEvent("onkeydown", bloquearSource);
+}
+
+function bloquearSource(e) {
+    e = e || window.event;
+
+    var code = e.which || e.keyCode;
+
+    if (
+        e.ctrlKey &&
+        (code == 83 || code == 85) //83 = S, 85 = U
+    ) {
+        if (e.preventDefault) {
+            e.preventDefault();
+        } else {
+            e.returnValue = false;
+        }
+
+        return false;
+    }
+}
+
+    </script>
+
+
+</body>
+</html>
