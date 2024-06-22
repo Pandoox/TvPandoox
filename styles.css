@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+   
+}
+header h1{
+    padding-top: 20px;
+    color: #fffdd9;
+            
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(88, 0, 160);
+    font-size: 35px; 
+}
+header img{
+    position: absolute;
+    width: 100px;
+    padding-left: 120px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.tv-channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.channel {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    
+}
+
+.channel:hover {
+    transform: scale(1.05);
+}
+
+.channel img {
+    width: 100%;
+    height: auto;
+}
+
+.channel p {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+nav ul li {
+    
+    display: inline;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+nav ul li a{
+    text-decoration:none;
+    color: #00c6f7;
+}
+
+
+
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -khtml-user-select: none; /* Konqueror */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none;
+}
+
+/*habilita a seleção nos campos editaveis*/
+input, textarea {
+    -webkit-touch-callout: initial; /* iOS Safari */
+      -webkit-user-select: text; /* Chrome/Safari/Opera */
+       -khtml-user-select: text; /* Konqueror */
+         -moz-user-select: text; /* Firefox */
+          -ms-user-select: text; /* Internet Explorer/Edge */
+              user-select: text;
+}
+
+/*habilita a seleção nos campos com o atributo contenteditable*/
+[contenteditable=true] {
+    -webkit-touch-callout: initial; /* iOS Safari */
+      -webkit-user-select: all; /* Chrome/Safari/Opera */
+       -khtml-user-select: all; /* Konqueror */
+         -moz-user-select: all; /* Firefox */
+          -ms-user-select: all; /* Internet Explorer/Edge */
+              user-select: all;
+}
+.development-message{
+    width: 1000px;
+    color: #ffffff;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+ 
+
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #555;
+}
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+.container {
+  text-align: center;
+}
+a button{
+    margin-bottom: 1rem;
+    padding: 1rem 2rem; /* Aumenta o tamanho do botão */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    cursor: pointer;
+    background-color: #ff4c4c; /* Define a cor de fundo avermelhada */
+    color: white; /* Define a cor do texto como branca */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+    position:absolute;
+    right: 250px;
+    align-items: center;
+    
+}
+a button:hover{
+    
+    background-color: #ff1a1a; /* Altera a cor de fundo ao passar o mouse */
+    
+
+}
+nav ul li a.active {
+        color: #e0d251; /* Altere esta cor para o que você preferir */
+        font-weight: bold; /* Adiciona um peso maior à fonte */
+        }
