@@ -150,17 +150,17 @@ h1 {
   text-align: center;
 }
 a button{
+    display: block;
     margin-bottom: 1rem;
     padding: 1rem 2rem; /* Aumenta o tamanho do botão */
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte */
     cursor: pointer;
     background-color: #ff4c4c; /* Define a cor de fundo avermelhada */
     color: white; /* Define a cor do texto como branca */
     border: none; /* Remove a borda */
     border-radius: 5px; /* Adiciona cantos arredondados */
     transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
-    position:absolute;
-    right: 250px;
+    
     align-items: center;
     
 }
