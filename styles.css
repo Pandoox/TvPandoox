@@ -174,3 +174,55 @@ nav ul li a.active {
         color: #e0d251; /* Altere esta cor para o que você preferir */
         font-weight: bold; /* Adiciona um peso maior à fonte */
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        nav ul {
+            list-style: none;
+            justify-content: center;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+            
+        }
+        nav ul li a {
+            text-decoration: none;
+            
+            display: block;
+           
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style: none;
+    
+            
+            flex-direction: column; /* Garante que o submenu fique em coluna */
+        }
+        nav ul li:hover ul {
+            display: flex;
+        }
+        nav ul li ul li {
+            width: 100%; /* Garante que o submenu tenha a mesma largura do item pai */
+        }
+        nav ul li ul li a {
+            padding: 10px;
+            background-color: #444;
+        }
+        nav ul li ul li a:hover {
+            background-color: #1d1d1d;
+        }
