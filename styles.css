@@ -1,0 +1,383 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 20px; /* Ajuste conforme necessário */
+}
+
+header img {
+    width: 100px;
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.tv-channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.channel {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+
+}
+
+.channel:hover {
+    transform: scale(1.05);
+}
+
+.channel img {
+    width: 100%;
+    height: auto;
+}
+
+.channel p {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+
+
+body {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+/*habilita a seleção nos campos editaveis*/
+input,
+textarea {
+    -webkit-touch-callout: initial;
+    /* iOS Safari */
+    -webkit-user-select: text;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: text;
+    /* Konqueror */
+    -moz-user-select: text;
+    /* Firefox */
+    -ms-user-select: text;
+    /* Internet Explorer/Edge */
+    user-select: text;
+}
+
+/*habilita a seleção nos campos com o atributo contenteditable*/
+[contenteditable=true] {
+    -webkit-touch-callout: initial;
+    /* iOS Safari */
+    -webkit-user-select: all;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: all;
+    /* Konqueror */
+    -moz-user-select: all;
+    /* Firefox */
+    -ms-user-select: all;
+    /* Internet Explorer/Edge */
+    user-select: all;
+}
+
+.development-message {
+    width: 1000px;
+    color: #ffffff;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.container {
+    text-align: center;
+}
+
+a button {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    /* Aumenta o tamanho do botão */
+    font-size: 1.3rem;
+    /* Aumenta o tamanho da fonte */
+    cursor: pointer;
+    background-color: #ff4c4c;
+    /* Define a cor de fundo avermelhada */
+    color: white;
+    /* Define a cor do texto como branca */
+    border: none;
+    /* Remove a borda */
+    border-radius: 5px;
+    /* Adiciona cantos arredondados */
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave para a cor de fundo */
+
+    align-items: center;
+
+}
+
+a button:hover {
+
+    background-color: #ff1a1a;
+    /* Altera a cor de fundo ao passar o mouse */
+
+
+}
+
+nav ul li a.active {
+    color: #e0d251;
+    /* Altere esta cor para o que você preferir */
+    font-weight: bold;
+    /* Adiciona um peso maior à fonte */
+}
+
+
+nav ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    display: block;
+
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+
+
+    flex-direction: column;
+    /* Garante que o submenu fique em coluna */
+}
+
+nav ul li:hover ul {
+    display: flex;
+}
+
+nav ul li ul li {
+    width: 100%;
+    /* Garante que o submenu tenha a mesma largura do item pai */
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    background-color: #444;
+}
+
+nav ul li ul li a:hover {
+    background-color: #1d1d1d;
+}
+
+
+
+
+
+/* ADICIONANDO AQUI EM BAIXO RESPONSIVIDADE DISPOSITIVO MOVEL*/
+
+/* Contêiner para logo e título */
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+
+    /* Reduzir o tamanho do título e imagem */
+    .logo-title h1 {
+        font-size: 24px;
+    }
+
+    .logo-title img {
+        width: 50px;
+    }
+
+    /* Ajustar o menu de navegação */
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li ul {
+        position: static;
+    }
+}
+
+/* Ajustes adicionais para telas muito pequenas */
+@media (max-width: 480px) {
+
+    /* Reduzir ainda mais o tamanho do título e imagem */
+    .logo-title h1 {
+        font-size: 20px;
+    }
+
+    .logo-title img {
+        width: 40px;
+    }
+
+    /* Ajustar o menu de navegação */
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+    /* ADICIONANDO AQUI EM BAIXO RESPONSIVIDADE DISPOSITIVO MOVEL*/
+}
+h2{
+    color: #ff4c4c;
+}
+.containerBoas{
+    background-color: #fff;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    text-align: center;
+    
+}
+nav ul li a.active::after {
+    content: "▼";
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px; /* Ajuste o tamanho da seta conforme necessário */
+    color: #009ac0; /* Cor da seta, pode ser ajustada conforme a necessidade */
+}
+
+
+form {
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    
+    
+    
+  }
+  form input {
+    
+    width: 300px;
+    height: 25px;
+    margin-top: 10px;
+    
+    
+    
+    
+  }
+  
+ 
+/* styles.css */
+
+button.watched {
+    background-color: #009ac0; /* Cor de fundo para o botão assistido */
+    color: white; /* Cor do texto */
+}
+

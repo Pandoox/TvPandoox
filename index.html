@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1726583840710374"
+        crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-1726583840710374">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
+    <meta name="description" content="tv, gratis, ao vivo, futebol, filmes, series, novelas,Renascer, globo, netflix, redecanais">
+    <meta name="copyright" content="Copyright (c) 2024 PandooxTv.">
+    
+    <title>Pandoox</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="img/television.png" />
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/television.png"></a>
+        <a href="index.html"><h1>PANDOOX</h1></a>
+        <br>
+        <nav>
+            <ul>
+                <li><a id="menuHome" href="index.html">PANDOOX</a></li>
+                <li><a id="menuHome" href="indexTv.html">TV</a></li>
+                <li><a id="menuFilmes" href="inde_filme.html">FILMES</a></li>
+                <li><a id="menuSeries" href="indexSerie.html">SERIES</a></li>
+                <li><a id="menuNovelas" href="index_novela.html">NOVELAS</a></li>
+
+                <li>
+                    <a id="menuJogos" href="#">JOGOS</a>
+                    <ul>
+                        <li><a id="menuEuro" href="Jogos_Euro.html">EURO</a></li>
+                        <li><a id="menuCopaAmerica" href="Jogos.html">COPA-AMÉRICA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="containerBoas">
+        
+        <p> Bem-vindo à PandooxTV! Estamos muito felizes em tê-lo aqui! A PandooxTV foi criada pensando em você, trazendo o melhor conteúdo para entreter, informar e inspirar. Esperamos que aproveite cada momento com nossos programas e séries cuidadosamente selecionados.</p>
+        <p>Pedimos que usufrua do nosso aplicativo com carinho. Nossa equipe trabalha incansavelmente para oferecer uma experiência única e prazerosa, e seu apoio é fundamental para continuarmos aprimorando nossos serviços.</p>
+        <p>Prepare a pipoca, acomode-se e mergulhe no universo da PandooxTV. Obrigado por fazer parte da nossa comunidade!</p>
+        <p>Com carinho,<br>Equipe PandooxTV</p>
+
+        <p>
+            <b>Relatar Erros e Bugs: </b><u><a href="https://t.me/+rdk0KMvgbMc2NGJh">Contato</a></u>
+        </p>
+    </div>
+
+    <section id="tvChannels" class="tv-channels">
+        <div class="channel" alt="SPORTV">
+            <a href="indexTv.html" onclick="showEpisodes('')">
+                <img src="img/TV.jpeg">
+                <p>TV</p>
+            </a>
+        </div>
+        <div class="channel" alt="SPORTV">
+            <a href="inde_filme.html" onclick="showEpisodes('')">
+                <img src="img/filmes (1).jpg">
+                <p>FILMES</p>
+            </a>
+        </div>
+        <div class="channel" alt="SPORTV">
+            <a href="indexSerie.html" onclick="showEpisodes('')">
+                <img src="img/Series (1).jpeg">
+                <p>SERIES</p>
+            </a>
+        </div>
+        <div class="channel" alt="SPORTV">
+            <a href="index_novela.html" onclick="showEpisodes('')">
+                <img src="img/novelas (1).jpg">
+                <p>NOVELAS</p>
+            </a>
+        </div>
+            <div class="channel" alt="SPORTV">
+                <a href="Jogos.html" onclick="showEpisodes('')">
+                    <img src="img/jogosFute (1).png">
+                    <p>FUTEBOL</p>
+                </a>
+        </div>
+    </section>
+
+    <script>
+      
+
+        function showEpisodes(seriesId) {
+            const seriesTitle = document.getElementById('seriesTitle');
+            const episodeButtons = document.getElementById('episodeButtons');
+            const videoContainer = document.getElementById('videoContainer');
+            const videoPlayer = document.getElementById('videoPlayer');
+            const tvChannels = document.getElementById('tvChannels');
+
+            // Hide the TV channels section
+            tvChannels.style.display = 'none';
+
+            // Reset the video player and buttons
+            seriesTitle.textContent = '';
+            episodeButtons.innerHTML = '';
+            videoPlayer.src = '';
+            videoContainer.style.display = 'none';
+
+            // Find the selected series
+            const series = seriesList.find(s => s.id === seriesId);
+            if (series) {
+                seriesTitle.textContent = series.title;
+                series.episodes.forEach(episode => {
+                    const button = document.createElement('button');
+                    button.textContent = episode.title;
+                    button.onclick = () => showVideo(episode.url);
+                    episodeButtons.appendChild(button);
+                });
+            }
+        }
+
+        function showVideo(url) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = url;
+            document.querySelectorAll('.channel').forEach(channel => {
+                channel.style.display = 'none';
+            });
+            document.getElementById('videoContainer').style.display = 'block';
+        }
+
+        // Prevent context menu and specific key combinations
+        if (document.addEventListener) {
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+                return false;
+            });
+        } else {
+            document.attachEvent("oncontextmenu", function (e) {
+                e = e || window.event;
+                e.returnValue = false;
+                return false;
+            });
+        }
+
+        if (document.addEventListener) {
+            document.addEventListener("keydown", bloquearSource);
+        } else {
+            document.attachEvent("onkeydown", bloquearSource);
+        }
+
+        function bloquearSource(e) {
+            e = e || window.event;
+            var code = e.which || e.keyCode;
+            if (e.ctrlKey && (code == 83 || code == 85)) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                } else {
+                    e.returnValue = false;
+                }
+                return false;
+            }
+        }
+
+
+        // Função para remover a classe ativa de todos os itens de menu
+        function removeActiveClass() {
+            document.querySelectorAll('nav ul li a').forEach(function (item) {
+                item.classList.remove('active');
+            });
+        }
+
+        // Função para definir a classe ativa no item de menu clicado
+        function setActiveClass() {
+            // Remove a classe ativa de todos os itens de menu
+            removeActiveClass();
+
+            // Adiciona a classe ativa ao item de menu clicado
+            const currentPath = window.location.pathname;
+            if (currentPath.includes("index.html")) {
+                document.getElementById('menuHome').classList.add('active');
+            } else if (currentPath.includes("inde_filme.html")) {
+                document.getElementById('menuFilmes').classList.add('active');
+            } else if (currentPath.includes("indexSerie.html")) {
+                document.getElementById('menuSeries').classList.add('active');
+            } else if (currentPath.includes("index_novela.html")) {
+                document.getElementById('menuNovelas').classList.add('active');
+            }
+        }
+
+        // Adiciona um evento de escuta para chamar a função quando a página carregar
+        window.addEventListener('load', setActiveClass);
+
+
+
+
+
+        //função para receber o canal clicado da pagina jogos aovivo
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const channel = urlParams.get('channel');
+            if (channel) {
+                showEpisodes(channel.toUpperCase());
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>
