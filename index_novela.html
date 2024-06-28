@@ -52,37 +52,38 @@
     </form>
     <main>
         <section id="tvChannels" class="tv-channels">
-            <div class="channel">
+
+            <div class="channel" id="filmesimagem">
                 <a href="#" onclick="showEpisodes('apocalipse')">
                     <img src="img_nov/NOV_APOCALIPSE.png">
                     <p>Novela Apocalipse - 2017</p>
                 </a>
             </div>
-            <div class="channel">
+            <div class="channel" id="filmesimagem">
                 <a href="#" onclick="showEpisodes('Minireis')">
                     <img src="img_nov/NOV_MINIREIS.jpg">
                     <p>Novela Reis - 2015 (Mini Serie)</p>
                 </a>
             </div>
-            <div class="channel">
+            <div class="channel" id="filmesimagem">
                 <a href="#" onclick="showEpisodes('EscravaIsaura')">
                     <img src="img_nov/AEscravIsaura (1).jpg">
                     <p> Escrava Isaura - 2004</p>
                 </a>
             </div>
-            <div class="channel">
+            <div class="channel" id="filmesimagem">
                 <a href="#" onclick="showEpisodes('Renascer-2024')">
                     <img src="img_nov/Renascer (1).jpeg">
                     <p> Renascer - 2024</p>
                 </a>
             </div>
-            <div class="channel">
+            <div class="channel" id="filmesimagem">
                 <a href="#" onclick="showEpisodes('CheiaDeCharme')">
                     <img src="img_nov/CheiaDeCharme.jpg">
                     <p> Cheia De Charme - 2012</p>
                 </a>
             </div>
-            <div class="channel">
+            <div class="channel" id="filmesimagem">
                 <a href="#" onclick="showEpisodes('Renascer-1993')">
                     <img src="img_nov/Renascer - 1994.jpeg">
                     <p> Renascer - 1993</p>
@@ -103,6 +104,12 @@
 
             <div id="episodeButtons" class="buttons"></div>
 
+
+            <div class="pagination-container">
+                <button id="prevPage" onclick="changePage(-1)">Anterior</button>
+                <span id="pageNumber"></span>
+                <button id="nextPage" onclick="changePage(1)">Próxima</button>
+            </div>
         </div>
     </main>
 
@@ -1088,7 +1095,7 @@
             const tvChannels = document.getElementById('tvChannels');
 
 
-
+            document.querySelector('.pagination-container').style.display = 'none';
             // Hide the TV channels section
             tvChannels.style.display = 'none';
 
@@ -1160,12 +1167,14 @@
                 channel.style.display = 'none';
             });
             document.getElementById('videoContainer').style.display = 'block';
+            document.querySelector('.pagination-container').style.display = 'none';
         }
 
         // Prevent context menu and specific key combinations
         if (document.addEventListener) {
             document.addEventListener("contextmenu", function (e) {
                 e.preventDefault();
+                window.location.href = "https://pandooxtv.github.io/Otario/";
                 return false;
             });
         } else {
@@ -1185,15 +1194,35 @@
         function bloquearSource(e) {
             e = e || window.event;
             var code = e.which || e.keyCode;
-            if (e.ctrlKey && (code == 83 || code == 85)) {
+            if (e.ctrlKey && (code == 83 || code == 85 || code == 76 || code == 93)) {
                 if (e.preventDefault) {
                     e.preventDefault();
-                } else {
+                    window.location.href = "https://pandooxtv.github.io/Otario/";
+                }
+                else {
                     e.returnValue = false;
                 }
                 return false;
             }
+            if (code == 121 || code == 123) {
+                window.location.href = "https://pandooxtv.github.io/Otario/";
+            }
         }
+        (function () {
+            function detectDevTools() {
+                const start = performance.now();
+                debugger;
+                const end = performance.now();
+
+                if (end - start > 10) { // Se o tempo de execução do 'debugger' for significativo, o DevTools está aberto
+                    window.location.replace('https://pandooxtv.github.io/Otario/');
+                }
+
+            }
+
+            setInterval(detectDevTools, 1000);
+        })();
+
 
 
 
@@ -1246,6 +1275,43 @@
         function removeAccents(str) {
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         }
+
+
+
+
+        const moviesPerPage = 21;
+    let currentPage = 1;
+    const movies = document.querySelectorAll('.channel');
+    const totalPages = Math.ceil(movies.length / moviesPerPage);
+
+    function showPage(page) {
+        currentPage = page;
+        const start = (currentPage - 1) * moviesPerPage;
+        const end = start + moviesPerPage;
+
+        movies.forEach((movie, index) => {
+            if (index >= start && index < end) {
+                movie.style.display = 'block';
+            } else {
+                movie.style.display = 'none';
+            }
+        });
+
+        document.getElementById('pageNumber').innerText = `Página ${currentPage} de ${totalPages}`;
+        document.getElementById('prevPage').disabled = currentPage === 1;
+        document.getElementById('nextPage').disabled = currentPage === totalPages;
+    }
+
+    function changePage(direction) {
+        const newPage = currentPage + direction;
+        if (newPage > 0 && newPage <= totalPages) {
+            showPage(newPage);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        showPage(1);
+    });
 
     </script>
 

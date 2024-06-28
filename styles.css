@@ -380,4 +380,44 @@ button.watched {
     background-color: #009ac0; /* Cor de fundo para o botão assistido */
     color: white; /* Cor do texto */
 }
+/* deixa as imagens  de filmes e series todas do mesmo tamanho pegando de um id especifico que nesse caso é o filmesimagem */
+#filmesimagem img {
+    width:150px;
+    height:215px ;
+}
+#imagempequena img {
+    width:150px;
+    height:100px ;
+}
+
+
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.pagination-container button:hover {
+    background-color: #555;
+}
+
+.pagination-container span {
+    color: white;
+    font-size: 18px;
+}
+
 

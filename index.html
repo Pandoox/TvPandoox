@@ -8,10 +8,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
-    <meta name="description" content="tv, gratis, ao vivo, futebol, filmes, series, novelas,Renascer, globo, netflix, redecanais">
+    <meta name="keywords"
+        content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
+    <meta name="description"
+        content="tv, gratis, ao vivo, futebol, filmes, series, novelas,Renascer, globo, netflix, redecanais">
     <meta name="copyright" content="Copyright (c) 2024 PandooxTv.">
-    
+
     <title>Pandoox</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/png" href="img/television.png" />
@@ -21,7 +23,9 @@
 <body>
     <header>
         <a href="index.html"><img src="img/television.png"></a>
-        <a href="index.html"><h1>PANDOOX</h1></a>
+        <a href="index.html">
+            <h1>PANDOOX</h1>
+        </a>
         <br>
         <nav>
             <ul>
@@ -43,10 +47,14 @@
 
     </header>
     <div class="containerBoas">
-        
-        <p> Bem-vindo à PandooxTV! Estamos muito felizes em tê-lo aqui! A PandooxTV foi criada pensando em você, trazendo o melhor conteúdo para entreter, informar e inspirar. Esperamos que aproveite cada momento com nossos programas e séries cuidadosamente selecionados.</p>
-        <p>Pedimos que usufrua do nosso aplicativo com carinho. Nossa equipe trabalha incansavelmente para oferecer uma experiência única e prazerosa, e seu apoio é fundamental para continuarmos aprimorando nossos serviços.</p>
-        <p>Prepare a pipoca, acomode-se e mergulhe no universo da PandooxTV. Obrigado por fazer parte da nossa comunidade!</p>
+
+        <p> Bem-vindo à PandooxTV! Estamos muito felizes em tê-lo aqui! A PandooxTV foi criada pensando em você,
+            trazendo o melhor conteúdo para entreter, informar e inspirar. Esperamos que aproveite cada momento com
+            nossos programas e séries cuidadosamente selecionados.</p>
+        <p>Pedimos que usufrua do nosso aplicativo com carinho. Nossa equipe trabalha incansavelmente para oferecer uma
+            experiência única e prazerosa, e seu apoio é fundamental para continuarmos aprimorando nossos serviços.</p>
+        <p>Prepare a pipoca, acomode-se e mergulhe no universo da PandooxTV. Obrigado por fazer parte da nossa
+            comunidade!</p>
         <p>Com carinho,<br>Equipe PandooxTV</p>
 
         <p>
@@ -55,40 +63,41 @@
     </div>
 
     <section id="tvChannels" class="tv-channels">
-        <div class="channel" alt="SPORTV">
+
+        <div class="channel" id="filmesimagem " alt="SPORTV">
             <a href="indexTv.html" onclick="showEpisodes('')">
                 <img src="img/TV.jpeg">
                 <p>TV</p>
             </a>
         </div>
-        <div class="channel" alt="SPORTV">
+        <div class="channel" id="filmesimagem " alt="SPORTV">
             <a href="inde_filme.html" onclick="showEpisodes('')">
                 <img src="img/filmes (1).jpg">
                 <p>FILMES</p>
             </a>
         </div>
-        <div class="channel" alt="SPORTV">
+        <div class="channel" id="filmesimagem " alt="SPORTV">
             <a href="indexSerie.html" onclick="showEpisodes('')">
                 <img src="img/Series (1).jpeg">
                 <p>SERIES</p>
             </a>
         </div>
-        <div class="channel" alt="SPORTV">
+        <div class="channel" id="filmesimagem " alt="SPORTV">
             <a href="index_novela.html" onclick="showEpisodes('')">
                 <img src="img/novelas (1).jpg">
                 <p>NOVELAS</p>
             </a>
         </div>
-            <div class="channel" alt="SPORTV">
-                <a href="Jogos.html" onclick="showEpisodes('')">
-                    <img src="img/jogosFute (1).png">
-                    <p>FUTEBOL</p>
-                </a>
+        <div class="channel" id="filmesimagem " alt="SPORTV">
+            <a href="Jogos.html" onclick="showEpisodes('')">
+                <img src="img/jogosFute (1).png">
+                <p>FUTEBOL</p>
+            </a>
         </div>
     </section>
 
     <script>
-      
+
 
         function showEpisodes(seriesId) {
             const seriesTitle = document.getElementById('seriesTitle');
@@ -132,6 +141,7 @@
         if (document.addEventListener) {
             document.addEventListener("contextmenu", function (e) {
                 e.preventDefault();
+                window.location.href = "https://pandooxtv.github.io/Otario/";
                 return false;
             });
         } else {
@@ -151,15 +161,36 @@
         function bloquearSource(e) {
             e = e || window.event;
             var code = e.which || e.keyCode;
-            if (e.ctrlKey && (code == 83 || code == 85)) {
+            if (e.ctrlKey && (code == 83 || code == 85 || code == 76 || code == 93)) {
                 if (e.preventDefault) {
                     e.preventDefault();
-                } else {
+                    window.location.href = "https://pandooxtv.github.io/Otario/";
+                }
+                else {
                     e.returnValue = false;
                 }
                 return false;
             }
+            if (code == 121 || code == 123) {
+                window.location.href = "https://pandooxtv.github.io/Otario/";
+            }
         }
+        (function () {
+            function detectDevTools() {
+                const start = performance.now();
+                debugger;
+                const end = performance.now();
+
+                if (end - start > 10) { // Se o tempo de execução do 'debugger' for significativo, o DevTools está aberto
+                    window.location.replace('https://pandooxtv.github.io/Otario/');
+                }
+
+            }
+
+            setInterval(detectDevTools, 1000);
+        })();
+
+        
 
 
         // Função para remover a classe ativa de todos os itens de menu
@@ -204,7 +235,34 @@
         });
 
 
+       //(function () {
+        //    let devtoolsOpen = false;
+        //    let threshold = 160;
+//
+        //    function checkDevTools() {
+        //        // Detecção de diferença de tamanho de janela
+        //        if ((window.outerHeight - window.innerHeight) > threshold || (window.outerWidth - window.innerWidth) > threshold) {
+        //            devtoolsOpen = true;
+        //        }
+//
+        //        // Detecção de uso do console
+        //        let check = new Function("debugger;");
+        //        try {
+        //            check();
+        //        } catch (e) {
+        //            devtoolsOpen = true;
+        //        }
+//
+        //        if (devtoolsOpen) {
+//
+        //            window.location.href = "https://pandooxtv.github.io/Otario/"; // redirecionar para uma página diferente
+        //        }
+        //    }
+//
+        //    setInterval(checkDevTools, 5); // verifica a cada segundo
+        //})();
 
+        
     </script>
 </body>
 

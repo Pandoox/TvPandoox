@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1726583840710374"
-     crossorigin="anonymous"></script>
-     <meta name="google-adsense-account" content="ca-pub-1726583840710374">
-     
+        crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-1726583840710374">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
-    <meta name="description" content="tv, gratis, ao vivo, futebol, filmes, series, novelas,Renascer, globo, netflix, redecanais">
+    <meta name="keywords"
+        content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
+    <meta name="description"
+        content="tv, gratis, ao vivo, futebol, filmes, series, novelas,Renascer, globo, netflix, redecanais">
     <meta name="copyright" content="Copyright (c) 2024 PandooxTv.">
     <title>Series</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/png" href="img/television.png"/>
+    <link rel="shortcut icon" type="image/png" href="img/television.png" />
 
 </head>
+
 <body>
     <header>
         <a href="indexSerie.html"><img src="img/television.png"></a>
-        <a href="indexSerie.html"><h1>SERIES</h1></a>
+        <a href="indexSerie.html">
+            <h1>SERIES</h1>
+        </a>
         <br>
         <nav>
             <ul>
@@ -73,15 +79,22 @@
         <div class="container">
             <h1 id="seriesTitle"></h1>
             <div class="videoContainer" id="videoContainer" style="display: none;">
-                
-                <iframe id="videoPlayer" class="videoPlayer" src="" width="840" height="600" frameborder="0" scrolling="no" allow="encrypted-media" allowfullscreen></iframe>
+
+                <iframe id="videoPlayer" class="videoPlayer" src="" width="840" height="600" frameborder="0"
+                    scrolling="no" allow="encrypted-media" allowfullscreen></iframe>
             </div>
             <div id="episodeButtons" class="buttons"></div>
+
+            <div class="pagination-container">
+                <button id="prevPage" onclick="changePage(-1)">Anterior</button>
+                <span id="pageNumber"></span>
+                <button id="nextPage" onclick="changePage(1)">Próxima</button>
+            </div>
         </div>
     </main>
 
     <script>
- const seriesList = [
+        const seriesList = [
             {
                 id: 'acasadodragao',
                 title: 'A Casa Do Dragão - Capítulos',
@@ -96,7 +109,7 @@
                     { title: 'Capítulo 8', url: 'https://%E3%83%87-%E3%83%B3-%E3%83%83-%E3%82%AF-%E3%82%B9-%E3%83%B3-%E3%83%87-%E3%83%89-%E3%83%89-%E3%83%AB-%E3%83%9C-%E3%83%A9-%E3%83%AB%E3%82%B0%E3%83%AC%E3%83%95%E3%83%88-%E3%83%96%E3%83%A0%E3%83%95%E3%82%AF%E3%83%88%E3%83%97%E3%83%89%E3%83%A9%E3%82%A2.%E3%82%B8-1l1-%E3%82%B0.%E3%83%83-22-%E3%82%AF-11-%E3%82%B9-33-%E3%83%AB-99-%E3%83%97-75-%E3%82%BE--%E3%82%A8--%E3%83%96--%E3%82%B9-%E3%83%83.%E3%82%AF.%E3%82%B9.%E3%82%BA.%E3%82%AF.%E3%82%B8.%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E3%83%91%E3%83%96%E3%83%AA%E3%82%B3-%E5%85%AC%E5%85%B1%E3%81%AE%E6%A8%99%E8%AD%98-%E3%83%90%E3%83%AC%E3%82%A6%E3%83%89%E3%83%83%E3%83%88%E3%82%B0%E3%82%A6%E3%82%AF%E3%83%88%E3%83%83%E3%83%88%E3%82%BA%E3%83%92.%E3%82%BB%E3%83%BC%E3%83%AB/player3/server18hlb.php?vid=ACSADRGT01EP08' },
                     { title: 'Capítulo 9', url: 'https://%E3%83%87-%E3%83%B3-%E3%83%83-%E3%82%AF-%E3%82%B9-%E3%83%B3-%E3%83%87-%E3%83%89-%E3%83%89-%E3%83%AB-%E3%83%9C-%E3%83%A9-%E3%83%AB%E3%82%B0%E3%83%AC%E3%83%95%E3%83%88-%E3%83%96%E3%83%A0%E3%83%95%E3%82%AF%E3%83%88%E3%83%97%E3%83%89%E3%83%A9%E3%82%A2.%E3%82%B8-1l1-%E3%82%B0.%E3%83%83-22-%E3%82%AF-11-%E3%82%B9-33-%E3%83%AB-99-%E3%83%97-75-%E3%82%BE--%E3%82%A8--%E3%83%96--%E3%82%B9-%E3%83%83.%E3%82%AF.%E3%82%B9.%E3%82%BA.%E3%82%AF.%E3%82%B8.%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E3%83%91%E3%83%96%E3%83%AA%E3%82%B3-%E5%85%AC%E5%85%B1%E3%81%AE%E6%A8%99%E8%AD%98-%E3%83%90%E3%83%AC%E3%82%A6%E3%83%89%E3%83%83%E3%83%88%E3%82%B0%E3%82%A6%E3%82%AF%E3%83%88%E3%83%83%E3%83%88%E3%82%BA%E3%83%92.%E3%82%BB%E3%83%BC%E3%83%AB/player3/server18hlb.php?vid=ACSADRGT01EP09' },
                     { title: 'Capítulo 10', url: 'https://%E3%83%87-%E3%83%B3-%E3%83%83-%E3%82%AF-%E3%82%B9-%E3%83%B3-%E3%83%87-%E3%83%89-%E3%83%89-%E3%83%AB-%E3%83%9C-%E3%83%A9-%E3%83%AB%E3%82%B0%E3%83%AC%E3%83%95%E3%83%88-%E3%83%96%E3%83%A0%E3%83%95%E3%82%AF%E3%83%88%E3%83%97%E3%83%89%E3%83%A9%E3%82%A2.%E3%82%B8-1l1-%E3%82%B0.%E3%83%83-22-%E3%82%AF-11-%E3%82%B9-33-%E3%83%AB-99-%E3%83%97-75-%E3%82%BE--%E3%82%A8--%E3%83%96--%E3%82%B9-%E3%83%83.%E3%82%AF.%E3%82%B9.%E3%82%BA.%E3%82%AF.%E3%82%B8.%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E3%83%91%E3%83%96%E3%83%AA%E3%82%B3-%E5%85%AC%E5%85%B1%E3%81%AE%E6%A8%99%E8%AD%98-%E3%83%90%E3%83%AC%E3%82%A6%E3%83%89%E3%83%83%E3%83%88%E3%82%B0%E3%82%A6%E3%82%AF%E3%83%88%E3%83%83%E3%83%88%E3%82%BA%E3%83%92.%E3%82%BB%E3%83%BC%E3%83%AB/player3/server18hlb.php?vid=ACSADRGT01EP10' }
-                    
+
                 ]
             },
             {
@@ -105,8 +118,8 @@
                 episodes: [
                     { title: 'EM BREVE...', url: '' },
 
-                   
-                    
+
+
                 ]
             },
             {
@@ -115,8 +128,8 @@
                 episodes: [
                     { title: 'EM BREVE...', url: '' },
 
-                   
-                    
+
+
                 ]
             },
             {
@@ -138,77 +151,79 @@
         function showEpisodes(seriesId) {
 
 
-const seriesTitle = document.getElementById('seriesTitle');
-const episodeButtons = document.getElementById('episodeButtons');
-const videoContainer = document.getElementById('videoContainer');
-const videoPlayer = document.getElementById('videoPlayer');
-const tvChannels = document.getElementById('tvChannels');
+            const seriesTitle = document.getElementById('seriesTitle');
+            const episodeButtons = document.getElementById('episodeButtons');
+            const videoContainer = document.getElementById('videoContainer');
+            const videoPlayer = document.getElementById('videoPlayer');
+            const tvChannels = document.getElementById('tvChannels');
+
+            document.querySelector('.pagination-container').style.display = 'none';
 
 
 
-// Hide the TV channels section
-tvChannels.style.display = 'none';
+            // Hide the TV channels section
+            tvChannels.style.display = 'none';
 
-// Reset the video player and buttons
-seriesTitle.textContent = '';
-episodeButtons.innerHTML = '';
-videoPlayer.src = '';
-videoContainer.style.display = 'none';
+            // Reset the video player and buttons
+            seriesTitle.textContent = '';
+            episodeButtons.innerHTML = '';
+            videoPlayer.src = '';
+            videoContainer.style.display = 'none';
 
-// Find the selected series
-const series = seriesList.find(s => s.id === seriesId);
-if (series) {
-    seriesTitle.textContent = series.title;
-    series.episodes.forEach(episode => {
-        const button = document.createElement('button');
-        button.textContent = episode.title;
-        button.onclick = () => showVideo(episode.url);
-        episodeButtons.appendChild(button);
-    });
-}
-
-
-
-else if (!series) return;
-
-document.getElementById('seriesTitle').textContent = series.title;
-
-episodeButtons.innerHTML = ''; // Limpa os botões anteriores
-
-// Carrega o índice do episódio assistido do localStorage
-const watchedEpisodeIndex = localStorage.getItem(`watchedEpisode-${seriesId}`);
-
-series.episodes.forEach((episode, index) => {
-    const button = document.createElement('button');
-    button.textContent = episode.title;
-
-    // Se o índice do episódio corresponder ao salvo no localStorage, adicione a classe 'watched'
-    if (watchedEpisodeIndex == index) {
-        button.classList.add('watched');
-    }
-
-    button.onclick = () => {
-        // Remover a classe 'watched' de todos os botões
-        document.querySelectorAll('#episodeButtons button').forEach(btn => btn.classList.remove('watched'));
-
-        // Adiciona a classe 'watched' ao botão do episódio atual
-        button.classList.add('watched');
-
-        // Salva o índice do episódio assistido no localStorage
-        localStorage.setItem(`watchedEpisode-${seriesId}`, index);
-
-        // Carrega o vídeo do episódio
-        const videoPlayer = document.getElementById('videoPlayer');
-        videoPlayer.src = episode.url;
-        document.getElementById('videoContainer').style.display = 'block';
-    };
-
-    episodeButtons.appendChild(button);
-});
+            // Find the selected series
+            const series = seriesList.find(s => s.id === seriesId);
+            if (series) {
+                seriesTitle.textContent = series.title;
+                series.episodes.forEach(episode => {
+                    const button = document.createElement('button');
+                    button.textContent = episode.title;
+                    button.onclick = () => showVideo(episode.url);
+                    episodeButtons.appendChild(button);
+                });
+            }
 
 
 
-}
+            else if (!series) return;
+
+            document.getElementById('seriesTitle').textContent = series.title;
+
+            episodeButtons.innerHTML = ''; // Limpa os botões anteriores
+
+            // Carrega o índice do episódio assistido do localStorage
+            const watchedEpisodeIndex = localStorage.getItem(`watchedEpisode-${seriesId}`);
+
+            series.episodes.forEach((episode, index) => {
+                const button = document.createElement('button');
+                button.textContent = episode.title;
+
+                // Se o índice do episódio corresponder ao salvo no localStorage, adicione a classe 'watched'
+                if (watchedEpisodeIndex == index) {
+                    button.classList.add('watched');
+                }
+
+                button.onclick = () => {
+                    // Remover a classe 'watched' de todos os botões
+                    document.querySelectorAll('#episodeButtons button').forEach(btn => btn.classList.remove('watched'));
+
+                    // Adiciona a classe 'watched' ao botão do episódio atual
+                    button.classList.add('watched');
+
+                    // Salva o índice do episódio assistido no localStorage
+                    localStorage.setItem(`watchedEpisode-${seriesId}`, index);
+
+                    // Carrega o vídeo do episódio
+                    const videoPlayer = document.getElementById('videoPlayer');
+                    videoPlayer.src = episode.url;
+                    document.getElementById('videoContainer').style.display = 'block';
+                };
+
+                episodeButtons.appendChild(button);
+            });
+
+
+
+        }
 
         function showVideo(url) {
             const videoPlayer = document.getElementById('videoPlayer');
@@ -221,12 +236,13 @@ series.episodes.forEach((episode, index) => {
 
         // Prevent context menu and specific key combinations
         if (document.addEventListener) {
-            document.addEventListener("contextmenu", function(e) {
+            document.addEventListener("contextmenu", function (e) {
                 e.preventDefault();
+                window.location.href = "https://pandooxtv.github.io/Otario/";
                 return false;
             });
         } else {
-            document.attachEvent("oncontextmenu", function(e) {
+            document.attachEvent("oncontextmenu", function (e) {
                 e = e || window.event;
                 e.returnValue = false;
                 return false;
@@ -242,64 +258,122 @@ series.episodes.forEach((episode, index) => {
         function bloquearSource(e) {
             e = e || window.event;
             var code = e.which || e.keyCode;
-            if (e.ctrlKey && (code == 83 || code == 85)) {
+            if (e.ctrlKey && (code == 83 || code == 85 || code == 76 || code == 93)) {
                 if (e.preventDefault) {
                     e.preventDefault();
-                } else {
+                    window.location.href = "https://pandooxtv.github.io/Otario/";
+                }
+                else {
                     e.returnValue = false;
                 }
                 return false;
             }
+            if (code == 121 || code == 123) {
+                window.location.href = "https://pandooxtv.github.io/Otario/";
+            }
+        }
+        (function () {
+            function detectDevTools() {
+                const start = performance.now();
+                debugger;
+                const end = performance.now();
+
+                if (end - start > 10) { // Se o tempo de execução do 'debugger' for significativo, o DevTools está aberto
+                    window.location.replace('https://pandooxtv.github.io/Otario/');
+                }
+
+            }
+
+            setInterval(detectDevTools, 1000);
+        })();
+
+
+
+        // Função para remover a classe ativa de todos os itens de menu
+        function removeActiveClass() {
+            document.querySelectorAll('nav ul li a').forEach(function (item) {
+                item.classList.remove('active');
+            });
         }
 
+        // Função para definir a classe ativa no item de menu clicado
+        function setActiveClass() {
+            // Remove a classe ativa de todos os itens de menu
+            removeActiveClass();
 
-         // Função para remover a classe ativa de todos os itens de menu
-    function removeActiveClass() {
-        document.querySelectorAll('nav ul li a').forEach(function(item) {
-            item.classList.remove('active');
+            // Adiciona a classe ativa ao item de menu clicado
+            const currentPath = window.location.pathname;
+            if (currentPath.includes("index.html")) {
+                document.getElementById('menuHome').classList.add('active');
+            } else if (currentPath.includes("inde_filme.html")) {
+                document.getElementById('menuFilmes').classList.add('active');
+            } else if (currentPath.includes("indexSerie.html")) {
+                document.getElementById('menuSeries').classList.add('active');
+            } else if (currentPath.includes("index_novela.html")) {
+                document.getElementById('menuNovelas').classList.add('active');
+            }
+        }
+
+        // Adiciona um evento de escuta para chamar a função quando a página carregar
+        window.addEventListener('load', setActiveClass);
+
+        document.getElementById('searchBar').addEventListener('keyup', function () {
+            var input = document.getElementById('searchBar').value.toLowerCase();
+            var normalizedInput = removeAccents(input);
+            var movieDivs = document.getElementsByClassName('channel');
+
+            for (var i = 0; i < movieDivs.length; i++) {
+                var title = movieDivs[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+                var normalizedTitle = removeAccents(title);
+                if (normalizedTitle.indexOf(normalizedInput) > -1) {
+                    movieDivs[i].style.display = "";
+                } else {
+                    movieDivs[i].style.display = "none";
+                }
+            }
         });
+
+        function removeAccents(str) {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+      
+
+        
+        const moviesPerPage = 21;
+    let currentPage = 1;
+    const movies = document.querySelectorAll('.channel');
+    const totalPages = Math.ceil(movies.length / moviesPerPage);
+
+    function showPage(page) {
+        currentPage = page;
+        const start = (currentPage - 1) * moviesPerPage;
+        const end = start + moviesPerPage;
+
+        movies.forEach((movie, index) => {
+            if (index >= start && index < end) {
+                movie.style.display = 'block';
+            } else {
+                movie.style.display = 'none';
+            }
+        });
+
+        document.getElementById('pageNumber').innerText = `Página ${currentPage} de ${totalPages}`;
+        document.getElementById('prevPage').disabled = currentPage === 1;
+        document.getElementById('nextPage').disabled = currentPage === totalPages;
     }
 
-    // Função para definir a classe ativa no item de menu clicado
-    function setActiveClass() {
-        // Remove a classe ativa de todos os itens de menu
-        removeActiveClass();
-
-        // Adiciona a classe ativa ao item de menu clicado
-        const currentPath = window.location.pathname;
-        if (currentPath.includes("index.html")) {
-            document.getElementById('menuHome').classList.add('active');
-        } else if (currentPath.includes("inde_filme.html")) {
-            document.getElementById('menuFilmes').classList.add('active');
-        } else if (currentPath.includes("indexSerie.html")) {
-            document.getElementById('menuSeries').classList.add('active');
-        } else if (currentPath.includes("index_novela.html")) {
-            document.getElementById('menuNovelas').classList.add('active');
+    function changePage(direction) {
+        const newPage = currentPage + direction;
+        if (newPage > 0 && newPage <= totalPages) {
+            showPage(newPage);
         }
     }
 
-    // Adiciona um evento de escuta para chamar a função quando a página carregar
-    window.addEventListener('load', setActiveClass);
-
-    document.getElementById('searchBar').addEventListener('keyup', function() {
-    var input = document.getElementById('searchBar').value.toLowerCase();
-    var normalizedInput = removeAccents(input);
-    var movieDivs = document.getElementsByClassName('channel');
-
-    for (var i = 0; i < movieDivs.length; i++) {
-        var title = movieDivs[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-        var normalizedTitle = removeAccents(title);
-        if (normalizedTitle.indexOf(normalizedInput) > -1) {
-            movieDivs[i].style.display = "";
-        } else {
-            movieDivs[i].style.display = "none";
-        }
-    }
-});
-
-function removeAccents(str) {
-    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
+    document.addEventListener('DOMContentLoaded', () => {
+        showPage(1);
+    });
     </script>
 </body>
+
 </html>
