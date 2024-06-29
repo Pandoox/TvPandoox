@@ -388,10 +388,24 @@ button.watched {
     width:150px;
     height:215px ;
 }
+#seriesimagem img {
+    width:150px;
+    height:215px ;
+}
 #imagempequena img {
     width:150px;
     height:100px ;
+
+
 }
+#episodeButtonsSerie button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
 
 
 
