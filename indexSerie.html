@@ -124,7 +124,28 @@
                 id: 'ArcanjoRenegado',
                 title: 'Arcanjo Renegado - Lista Episodios (Nacional)',
                 episodes: [
-                    { title: 'EM BREVE...', url: '' },
+                    { title: 'T1 - 01', url: 'https://ok.ru/videoembed/7510690630379' },
+                    { title: 'T1 - 02', url: 'https://ok.ru/videoembed/7510700264171' },
+                    { title: 'T1 - 03', url: 'https://ok.ru/videoembed/7510700657387' },
+                    { title: 'T1 - 04', url: 'https://ok.ru/videoembed/7510700788459' },
+                    { title: 'T1 - 05', url: 'https://ok.ru/videoembed/7510701116139' },
+                    { title: 'T1 - 06', url: 'https://ok.ru/videoembed/7510701378283' },
+                    { title: 'T1 - 07', url: 'https://ok.ru/videoembed/7510701771499' },
+                    { title: 'T1 - 08', url: 'https://ok.ru/videoembed/7510701968107' },
+                    { title: 'T1 - 09', url: 'https://ok.ru/videoembed/7510702492395' },
+                    { title: 'T1 - 10', url: 'https://ok.ru/videoembed/7510703278827' },
+
+                    { title: 'T2 - 01', url: 'https://ok.ru/videoembed/7510703606507' },
+                    { title: 'T2 - 02', url: 'https://ok.ru/videoembed/7510704196331' },
+                    { title: 'T2 - 03', url: 'https://ok.ru/videoembed/7510704524011' },
+                    { title: 'T2 - 04', url: 'https://ok.ru/videoembed/7510704655083' },
+                    { title: 'T2 - 05', url: 'https://ok.ru/videoembed/7510704917227' },
+                    { title: 'T2 - 06', url: 'https://ok.ru/videoembed/7510705244907' },
+                    { title: 'T2 - 07', url: 'https://ok.ru/videoembed/7510705375979' },
+                    { title: 'T2 - 08', url: 'https://ok.ru/videoembed/7510705507051' },
+                    { title: 'T2 - 09', url: 'https://ok.ru/videoembed/7510706031339' },
+                    { title: 'T2 - 10', url: 'https://ok.ru/videoembed/7510706293483' },
+                    
 
 
 
@@ -396,17 +417,58 @@
             var input = document.getElementById('searchBar').value.toLowerCase();
             var normalizedInput = removeAccents(input);
             var movieDivs = document.getElementsByClassName('channel');
+            var filteredMovies = [];
 
             for (var i = 0; i < movieDivs.length; i++) {
                 var title = movieDivs[i].getElementsByTagName('p')[0].innerText.toLowerCase();
                 var normalizedTitle = removeAccents(title);
                 if (normalizedTitle.indexOf(normalizedInput) > -1) {
-                    movieDivs[i].style.display = "";
+                    filteredMovies.push(movieDivs[i]);
                 } else {
-                    movieDivs[i].style.display = "none";
+                    movieDivs[i].style.display = 'none';
                 }
             }
+
+            paginateFilteredMovies(filteredMovies);
         });
+
+        function paginateFilteredMovies(filteredMovies) {
+            const moviesPerPage = 21;
+            let currentPage = 1;
+            const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
+
+            function showPage(page) {
+                currentPage = page;
+                const start = (currentPage - 1) * moviesPerPage;
+                const end = start + moviesPerPage;
+
+                filteredMovies.forEach((movie, index) => {
+                    if (index >= start && index < end) {
+                        movie.style.display = 'block';
+                    } else {
+                        movie.style.display = 'none';
+                    }
+                });
+
+                document.getElementById('pageNumber').innerText = `Página ${currentPage} de ${totalPages}`;
+                document.getElementById('prevPage').disabled = currentPage === 1;
+                document.getElementById('nextPage').disabled = currentPage === totalPages;
+            }
+
+            document.getElementById('prevPage').addEventListener('click', function () {
+                if (currentPage > 1) {
+                    showPage(currentPage - 1);
+                }
+            });
+
+            document.getElementById('nextPage').addEventListener('click', function () {
+                if (currentPage < totalPages) {
+                    showPage(currentPage + 1);
+                }
+            });
+
+            showPage(1);
+        }
 
         function removeAccents(str) {
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
