@@ -8,6 +8,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assista a novelas e minisséries bíblicas em hd completo, novelas da record, séries gospel, filmes cristãos." />
     <meta name="keywords"
         content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
     <meta name="description"
@@ -54,15 +55,21 @@
         <section id="tvChannels" class="tv-channels">
 
             <div class="channel" id="filmesimagem">
+                <a href="#" onclick="showEpisodes('Reis')">
+                    <img src="https://i.ibb.co/whB8N6V/Reis.jpg">
+                    <p>Novela Reis - 2022</p>
+                </a>
+            </div>
+            <div class="channel" id="filmesimagem">
                 <a href="#" onclick="showEpisodes('apocalipse')">
                     <img src="img_nov/NOV_APOCALIPSE.png">
                     <p>Novela Apocalipse - 2017</p>
                 </a>
             </div>
             <div class="channel" id="filmesimagem">
-                <a href="#" onclick="showEpisodes('Minireis')">
+                <a href="#" onclick="showEpisodes('Rei Davi')">
                     <img src="img_nov/NOV_MINIREIS.jpg">
-                    <p>Novela Reis - 2015 (Mini Serie)</p>
+                    <p>Novela Rei Davi - 2015 (Mini Serie)</p>
                 </a>
             </div>
             <div class="channel" id="filmesimagem">
@@ -117,9 +124,195 @@
 
     <script>
         const seriesList = [
+            
+            
+            {
+                id: 'Reis',
+                title: 'Novela Reis - 2022 - Capitulos',
+                episodes: [
+                    { title: 'Cap - 001', url: 'https://ok.ru/video/3716463659607' },
+                    { title: 'Cap - 002', url: 'https://ok.ru/video/3719056525911' },
+                    { title: 'Cap - 003', url: 'https://ok.ru/video/3720329366103' },
+                    { title: 'Cap - 004', url: 'https://ok.ru/video/3722643114583' },
+                    { title: 'Cap - 005', url: 'https://ok.ru/video/3729970235991' },
+                    { title: 'Cap - 006', url: 'https://ok.ru/video/3732425673303' },
+                    { title: 'Cap - 007', url: 'https://ok.ru/video/3734709078615' },
+                    { title: 'Cap - 008', url: 'https://ok.ru/video/3736965417559' },
+                    { title: 'Cap - 009', url: 'https://ok.ru/video/3739580697175' },
+                    { title: 'Cap - 010', url: 'https://ok.ru/video/3746543962711' },
+
+                    { title: 'Cap - 011', url: 'https://ok.ru/video/3748966500951' },
+                    { title: 'Cap - 012', url: 'https://ok.ru/video/3751351224919' },
+                    { title: 'Cap - 013', url: 'https://ok.ru/video/3754389342807' },
+                    { title: 'Cap - 014', url: 'https://ok.ru/video/3757063866967' },
+                    { title: 'Cap - 015', url: 'https://ok.ru/video/3763627690583' },
+                    { title: 'Cap - 016', url: 'https://ok.ru/video/3766191524439' },
+                    { title: 'Cap - 017', url: 'https://ok.ru/video/3768328850007' },
+                    { title: 'Cap - 018', url: 'https://ok.ru/video/3770452150871' },
+                    { title: 'Cap - 019', url: 'https://ok.ru/video/3773165800023' },
+                    { title: 'Cap - 020', url: 'https://ok.ru/video/3779411446359' },
+
+                    { title: 'Cap - 021', url: 'https://ok.ru/video/3782035638871' },
+                    { title: 'Cap - 022', url: 'https://ok.ru/video/3785581202007' },
+                    { title: 'Cap - 023', url: 'https://ok.ru/video/3788797315671' },
+                    { title: 'Cap - 024', url: 'https://ok.ru/video/3789861489239' },
+                    { title: 'Cap - 025', url: 'https://ok.ru/video/3796472629847' },
+                    { title: 'Cap - 026', url: 'https://ok.ru/video/3799155083863' },
+                    { title: 'Cap - 027', url: 'https://ok.ru/video/3801766693463' },
+                    { title: 'Cap - 028', url: 'https://ok.ru/video/3804084111959' },
+                    { title: 'Cap - 029', url: 'https://ok.ru/video/3808231623255' },
+                    { title: 'Cap - 030', url: 'https://ok.ru/video/3814184585815' },
+
+                    { title: 'Cap - 031', url: 'https://ok.ru/video/3816313653847' },
+                    { title: 'Cap - 032', url: 'https://ok.ru/video/3818437216855' },
+                    { title: 'Cap - 033', url: 'https://ok.ru/video/3821238487639' },
+                    { title: 'Cap - 034', url: 'https://ok.ru/video/3825140238935' },
+                    { title: 'Cap - 035', url: 'https://ok.ru/video/3831125969495' },
+                    { title: 'Cap - 036', url: 'https://ok.ru/video/3833280399959' },
+                    { title: 'Cap - 037', url: 'https://ok.ru/video/3835686095447' },
+                    { title: 'Cap - 038', url: 'https://ok.ru/video/3837988309591' },
+                    { title: 'Cap - 039', url: 'https://ok.ru/video/3840227609175' },
+                    { title: 'Cap - 040', url: 'https://ok.ru/video/3847158172247' },
+
+                    { title: 'Cap - 041', url: 'https://ok.ru/video/3849509014103' },
+                    { title: 'Cap - 042', url: 'https://ok.ru/video/3852156996183' },
+                    { title: 'Cap - 043', url: 'https://ok.ru/video/3854249167447' },
+                    { title: 'Cap - 044', url: 'https://ok.ru/video/3856449342039' },
+                    { title: 'Cap - 045', url: 'https://ok.ru/video/3863269608023' },
+                    { title: 'Cap - 046', url: 'https://ok.ru/video/3865561860695' },
+                    { title: 'Cap - 047', url: 'https://ok.ru/video/3868233435735' },
+                    { title: 'Cap - 048', url: 'https://ok.ru/video/3870771645015' },
+                    { title: 'Cap - 049', url: 'https://ok.ru/video/3875459435095' },
+                    { title: 'Cap - 050', url: 'https://ok.ru/video/3881731754583' },
+
+                    { title: 'Cap - 051', url: 'https://ok.ru/video/3885189565015' },
+                    { title: 'Cap - 052', url: 'https://ok.ru/video/3887659616855' },
+                    { title: 'Cap - 053', url: 'https://ok.ru/video/3890911251031' },
+                    { title: 'Cap - 054', url: 'https://ok.ru/video/3895458662999' },
+                    { title: 'Cap - 055', url: 'https://ok.ru/video/3908821453399' },
+                    { title: 'Cap - 056', url: 'https://ok.ru/video/4097031473751' },
+                    { title: 'Cap - 057', url: 'https://ok.ru/video/4100690938455' },
+                    { title: 'Cap - 058', url: 'https://ok.ru/video/4310063909487' },
+                    { title: 'Cap - 059', url: 'https://ok.ru/video/4114855889495' },
+                    { title: 'Cap - 060', url: 'https://ok.ru/video/4117082081879' },
+
+                    { title: 'Cap - 061', url: 'https://ok.ru/video/4119091677783' },
+                    { title: 'Cap - 062', url: 'https://ok.ru/video/4121459165783' },
+                    { title: 'Cap - 063', url: 'https://ok.ru/video/4124933163607' },
+                    { title: 'Cap - 064', url: 'https://ok.ru/video/4129340262999' },
+                    { title: 'Cap - 065', url: 'https://ok.ru/video/4343730473583' },
+                    { title: 'Cap - 066', url: 'https://ok.ru/video/4142577683031' },
+                    { title: 'Cap - 067', url: 'https://ok.ru/video/4135947668055' },
+                    { title: 'Cap - 068', url: 'https://ok.ru/video/4140489050711' },
+                    { title: 'Cap - 069', url: 'https://ok.ru/video/4364564564591' },
+                    { title: 'Cap - 070', url: 'https://ok.ru/video/4368171666031' },
+
+                    { title: 'Cap - 071', url: 'https://ok.ru/video/4371710216815' },
+                    { title: 'Cap - 072', url: 'https://ok.ru/video/4375577627247' },
+                    { title: 'Cap - 073', url: 'https://ok.ru/video/4162760149591' },
+                    { title: 'Cap - 074', url: 'https://ok.ru/video/4389905238639' },
+                    { title: 'Cap - 075', url: 'https://ok.ru/video/4175979809367' },
+                    { title: 'Cap - 076', url: 'https://ok.ru/video/4178831542871' },
+                    { title: 'Cap - 077', url: 'https://ok.ru/video/4181363591767' },
+                    { title: 'Cap - 078', url: 'https://ok.ru/video/4183936469591' },
+                    { title: 'Cap - 079', url: 'https://ok.ru/video/4193534020183' },
+                    { title: 'Cap - 080', url: 'https://ok.ru/video/4196842342999' },
+
+                    { title: 'Cap - 081', url: 'https://ok.ru/video/4423427557999' },
+                    { title: 'Cap - 082', url: 'https://ok.ru/video/4427238673007' },
+                    { title: 'Cap - 083', url: 'https://ok.ru/video/4207033322071' },
+                    { title: 'Cap - 084', url: 'https://ok.ru/video/4216586504791' },
+                    { title: 'Cap - 085', url: 'https://ok.ru/video/4220902050391' },
+                    { title: 'Cap - 086', url: 'https://ok.ru/video/4224074779223' },
+                    { title: 'Cap - 087', url: 'https://ok.ru/video/4227453946455' },
+                    { title: 'Cap - 088', url: 'https://ok.ru/video/4231128353367' },
+                    { title: 'Cap - 089', url: 'https://ok.ru/video/4243713493591' },
+                    { title: 'Cap - 090', url: 'https://ok.ru/video/4243713952343' },
+
+                    { title: 'Cap - 091', url: 'https://ok.ru/video/4247137094231' },
+                    { title: 'Cap - 092', url: 'https://ok.ru/video/4250010847831' },
+                    { title: 'Cap - 093', url: 'https://ok.ru/video/4253426715223' },
+                    { title: 'Cap - 094', url: 'https://ok.ru/video/4269877365335' },
+                    { title: 'Cap - 095', url: 'https://ok.ru/video/4270059162199' },
+                    { title: 'Cap - 096', url: 'https://ok.ru/video/4276802161239' },
+                    { title: 'Cap - 097', url: 'https://ok.ru/video/4282182077015' },
+                    { title: 'Cap - 098', url: 'https://ok.ru/video/4284576369239' },
+                    { title: 'Cap - 099', url: 'https://ok.ru/video/5771167009395' },
+                    { title: 'Cap - 100', url: 'https://ok.ru/video/4299859429975' },
+
+                    { title: 'Cap - 101', url: 'https://ok.ru/video/4300697504343' },
+                    { title: 'Cap - 102', url: 'https://ok.ru/video/4303776123479' },
+                    { title: 'Cap - 103', url: 'https://ok.ru/video/4315441334871' },
+                    { title: 'Cap - 104', url: 'https://ok.ru/video/4323187690071' },
+                    { title: 'Cap - 105', url: 'https://ok.ru/video/4325526276695' },
+                    { title: 'Cap - 106', url: 'https://ok.ru/video/4327540460119' },
+                    { title: 'Cap - 107', url: 'https://ok.ru/video/4339153242711' },
+                    { title: 'Cap - 108', url: 'https://ok.ru/video/4339157305943' },
+                    { title: 'Cap - 109', url: 'https://ok.ru/video/4353346767447' },
+                    { title: 'Cap - 110', url: 'https://ok.ru/video/4356069263959' },
+
+                    { title: 'Cap - 111', url: 'https://ok.ru/video/4363026172503' },
+                    { title: 'Cap - 112', url: 'https://ok.ru/video/4381133245015' },
+                    { title: 'Cap - 113', url: 'https://ok.ru/video/4381137111639' },
+                    { title: 'Cap - 114', url: 'https://ok.ru/video/4392587627095' },
+                    { title: 'Cap - 115', url: 'https://ok.ru/video/4395104406103' },
+                    { title: 'Cap - 116', url: 'https://ok.ru/video/4635102349935' },
+                    { title: 'Cap - 117', url: 'https://ok.ru/video/4408830397015' },
+                    { title: 'Cap - 118', url: 'https://ok.ru/video/4409399249495' },
+                    { title: 'Cap - 119', url: 'https://ok.ru/video/4435179080279' },
+                    { title: 'Cap - 120', url: 'https://ok.ru/video/4435180849751' },
+
+                    { title: 'Cap - 121', url: 'https://ok.ru/video/4435235768919' },
+                    { title: 'Cap - 122', url: 'https://ok.ru/video/4435240553047' },
+                    { title: 'Cap - 123', url: 'https://ok.ru/video/4442879691351' },
+                    { title: 'Cap - 124', url: 'https://ok.ru/video/4705085033071' },
+                    { title: 'Cap - 125', url: 'https://ok.ru/video/4473485855319' },
+                    { title: 'Cap - 126', url: 'https://ok.ru/video/4501176126039' },
+                    { title: 'Cap - 127', url: 'https://ok.ru/video/4726923528815' },
+                    { title: 'Cap - 128', url: 'https://ok.ru/video/4735526373999' },
+                    { title: 'Cap - 129', url: 'https://ok.ru/video/4749429836399' },
+                    { title: 'Cap - 130', url: 'https://ok.ru/video/4752256535151' },
+
+                    { title: 'Cap - 131', url: 'https://ok.ru/video/4755057871471' },
+                    { title: 'Cap - 132', url: 'https://ok.ru/video/4757631994479' },
+                    { title: 'Cap - 133', url: 'https://ok.ru/video/4761100880495' },
+                    { title: 'Cap - 134', url: 'https://ok.ru/video/4542721493591' },
+                    { title: 'Cap - 135', url: 'https://ok.ru/video/4547019541079' },
+                    { title: 'Cap - 136', url: 'https://ok.ru/video/4550097766999' },
+                    { title: 'Cap - 137', url: 'https://ok.ru/video/4797277669999' },
+                    { title: 'Cap - 138', url: 'https://ok.ru/video/4561572465239' },
+                    { title: 'Cap - 139', url: 'https://ok.ru/video/5248945621591' },
+                    { title: 'Cap - 140', url: 'https://ok.ru/video/5256705870423' },
+
+                    { title: 'Cap - 141', url: 'https://ok.ru/video/5269147617879' },
+                    { title: 'Cap - 142', url: 'https://ok.ru/video/5280400411223' },
+                    { title: 'Cap - 143', url: 'https://ok.ru/video/5284314286679' },
+                    { title: 'Cap - 144', url: 'https://ok.ru/video/5312048597591' },
+                    { title: 'Cap - 145', url: 'https://ok.ru/video/5320746469975' },
+                    { title: 'Cap - 146', url: 'https://ok.ru/video/5331542346327' },
+                    { title: 'Cap - 147', url: 'https://ok.ru/video/5358950550103' },
+                    { title: 'Cap - 148', url: 'https://ok.ru/video/5358952974935' },
+                    { title: 'Cap - 149', url: 'https://ok.ru/video/5409192348247' },
+                    { title: 'Cap - 150', url: 'https://ok.ru/video/5409263061591' },
+
+                    { title: 'Cap - 151', url: 'https://ok.ru/video/5409345178199' },
+                    { title: 'Cap - 152', url: 'https://ok.ru/video/5409352780375' },
+                    { title: 'Cap - 153', url: 'https://ok.ru/video/5409358285399' },
+                    { title: 'Cap - 154', url: 'https://ok.ru/video/5720373987951' },
+                    { title: 'Cap - 155', url: 'https://ok.ru/video/5735057263215' },
+                    { title: 'Cap - 156', url: 'https://ok.ru/video/5748681804399' },
+                    { title: 'Cap - 157', url: 'https://ok.ru/video/5510989285975' },
+                    { title: 'Cap - 158', url: 'https://ok.ru/video/5510998657623' },
+                    { title: 'Cap - 159', url: 'https://ok.ru/video/5600597576279' },
+                    { title: 'Cap - 160', url: 'https://ok.ru/video/5600606030423' },
+
+
+
+                ]
+            },
             {
                 id: 'apocalipse',
-                title: 'Novela Apocalipse - 2017- Capítulos',
+                title: 'Novela Apocalipse - 2017 - Capítulos',
                 episodes: [
                     { title: 'Cap - 001', url: 'https://ok.ru/videoembed/394515581527' },
                     { title: 'Cap - 002', url: 'https://ok.ru/videoembed/395054877271' },
@@ -296,8 +489,8 @@
                 ]
             },
             {
-                id: 'Minireis',
-                title: 'Novela Reis - 2015 (Mini Serie) - Cap -s',
+                id: 'Rei Davi',
+                title: 'Novela Rei Davi - 2015 (Mini Serie)',
                 episodes: [
                     { title: 'Cap - 001', url: 'https://ok.ru/videoembed/35253979735' },
                     { title: 'Cap - 002', url: 'https://ok.ru/videoembed/36053453399' },
