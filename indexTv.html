@@ -8,7 +8,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Assista a novelas e minisséries bíblicas em hd completo, novelas da record, séries gospel, filmes cristãos." />
     <meta name="keywords"
         content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
     <meta name="description"
@@ -40,7 +40,7 @@
                     <ul>
                         <li><a id="menuEuro" href="Jogos_Euro.html">EURO</a></li>
                         <li><a id="menuCopaAmerica" href="Jogos.html">COPA-AMÉRICA</a></li>
-                         <li><a id="menuBrasileirao" href="jogos_Brasileirao.html">BRASILEIRÂO</a></li>
+                        <li><a id="menuBrasileirao" href="jogos_Brasileirao.html">BRASILEIRÂO</a></li>
                         <li><a id="menuBrasileirao" href="Jogos_Libertadores.html">LIBERTADORES</a></li>
                     </ul>
                 </li>
@@ -53,6 +53,12 @@
     </form>
     <main>
         <section id="tvChannels" class="tv-channels">
+            <div class="channel" id="imagempequena" alt="TNTSPORT">
+                <a href="#" onclick="showEpisodes('TNTSPORTS')">
+                    <img src="https://conteudo.imguol.com.br/c/esporte/df/2021/01/16/nova-marca-da-tnt-sports-que-substitui-o-esporte-interativo-1610824611734_v2_4x3.jpg">
+                    <p>TNTSPORTS</p>
+                </a>
+            </div>
             <div class="channel" id="imagempequena" alt="SPORTV">
                 <a href="#" onclick="showEpisodes('SPORTV')">
                     <img src="img/sportTV.png">
@@ -217,6 +223,15 @@
                     { title: 'SPORTV 1 OP 2', url: 'https://meuplayeronlinehd.com/myplay/watch.html?id=sportv' },
                     { title: 'SPORTV 2', url: 'https://embedmax.site/tvl/sportv2.php' },
                     { title: 'SPORTV 3', url: 'https://embedmax.site/tvl/sportv3.php' }
+
+                ]
+            },
+            {
+                id: 'TNTSPORTS',
+                title: 'TNTSPORTS - CANAIS',
+                episodes: [
+                    { title: 'TNTsports 1', url: 'https://reidoscanais.eu/embed/?id=tntsports' },
+                 
 
                 ]
             },
@@ -552,33 +567,7 @@
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         }
 
-       //(function () {
-        //    let devtoolsOpen = false;
-        //    let threshold = 160;
-//
-        //    function checkDevTools() {
-        //        // Detecção de diferença de tamanho de janela
-        //        if ((window.outerHeight - window.innerHeight) > threshold || (window.outerWidth - window.innerWidth) > threshold) {
-        //            devtoolsOpen = true;
-        //        }
-//
-        //        // Detecção de uso do console
-        //        let check = new Function("debugger;");
-        //        try {
-        //            check();
-        //        } catch (e) {
-        //            devtoolsOpen = true;
-        //        }
-//
-        //        if (devtoolsOpen) {
-//
-        //            window.location.href = "https://pandooxtv.github.io/Otario/"; // redirecionar para uma página diferente
-        //        }
-        //    }
-//
-        //    setInterval(checkDevTools, 5); // verifica a cada segundo
-        //})();
-
+      
 
     </script>
 </body>
