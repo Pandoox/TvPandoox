@@ -8,15 +8,457 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assista a jogos Online, Eurocopa, copaamaerica, brasileirão, libertadores, ligas dos campeões, Sportv, Tntsports, HBO, Max, Gratuito" />
     <meta name="keywords"
         content="tv, gratis, ao vivo, futebol, filmes, series, novelas, Renascer, globo, netflix, redecanais">
     <meta name="description"
         content="tv, gratis, ao vivo, futebol, filmes, series, novelas,Renascer, globo, netflix, redecanais">
     <meta name="copyright" content="Copyright (c) 2024 PandooxTv.">
     <title>Jogos</title>
-    <link rel="stylesheet" href="styles.css">
+    
     <link rel="shortcut icon" type="image/png" href="img/television.png" />
 
+ <style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #06335e;
+}
+
+header {
+    background-image: url(img_jogos/bkbrasil.jpg);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 20px; /* Ajuste conforme necessário */
+    color: #009ac0;
+}
+
+header img {
+    width: 100px;
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.tv-channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.channel {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+
+}
+
+.channel:hover {
+    transform: scale(1.05);
+}
+
+.channel img {
+    width: 100%;
+    height: auto;
+}
+
+.channel p {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+
+
+body {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+/*habilita a seleção nos campos editaveis*/
+input,
+textarea {
+    -webkit-touch-callout: initial;
+    /* iOS Safari */
+    -webkit-user-select: text;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: text;
+    /* Konqueror */
+    -moz-user-select: text;
+    /* Firefox */
+    -ms-user-select: text;
+    /* Internet Explorer/Edge */
+    user-select: text;
+}
+
+/*habilita a seleção nos campos com o atributo contenteditable*/
+[contenteditable=true] {
+    -webkit-touch-callout: initial;
+    /* iOS Safari */
+    -webkit-user-select: all;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: all;
+    /* Konqueror */
+    -moz-user-select: all;
+    /* Firefox */
+    -ms-user-select: all;
+    /* Internet Explorer/Edge */
+    user-select: all;
+}
+
+.development-message {
+    width: 1000px;
+    color: #ffffff;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.container {
+    text-align: center;
+}
+
+a button {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    /* Aumenta o tamanho do botão */
+    font-size: 1.3rem;
+    /* Aumenta o tamanho da fonte */
+    cursor: pointer;
+    background-color: #ff4c4c;
+    /* Define a cor de fundo avermelhada */
+    color: white;
+    /* Define a cor do texto como branca */
+    border: none;
+    /* Remove a borda */
+    border-radius: 5px;
+    /* Adiciona cantos arredondados */
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave para a cor de fundo */
+
+    align-items: center;
+
+}
+
+a button:hover {
+
+    background-color: #ff1a1a;
+    /* Altera a cor de fundo ao passar o mouse */
+
+
+}
+
+nav ul li a.active {
+    color: #e0d251;
+    /* Altere esta cor para o que você preferir */
+    font-weight: bold;
+    /* Adiciona um peso maior à fonte */
+}
+
+
+nav ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    display: block;
+
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+
+
+    flex-direction: column;
+    /* Garante que o submenu fique em coluna */
+}
+
+nav ul li:hover ul {
+    display: flex;
+}
+
+nav ul li ul li {
+    width: 100%;
+    /* Garante que o submenu tenha a mesma largura do item pai */
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    background-color: #8f2c2c;
+}
+
+nav ul li ul li a:hover {
+    background-color: #b83636;
+}
+
+
+
+
+
+/* ADICIONANDO AQUI EM BAIXO RESPONSIVIDADE DISPOSITIVO MOVEL*/
+
+/* Contêiner para logo e título */
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+
+    /* Reduzir o tamanho do título e imagem */
+    .logo-title h1 {
+        font-size: 24px;
+    }
+
+    .logo-title img {
+        width: 50px;
+    }
+
+    /* Ajustar o menu de navegação */
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li ul {
+        position: static;
+    }
+}
+
+/* Ajustes adicionais para telas muito pequenas */
+@media (max-width: 480px) {
+
+    /* Reduzir ainda mais o tamanho do título e imagem */
+    .logo-title h1 {
+        font-size: 20px;
+    }
+
+    .logo-title img {
+        width: 40px;
+    }
+
+    /* Ajustar o menu de navegação */
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+    /* ADICIONANDO AQUI EM BAIXO RESPONSIVIDADE DISPOSITIVO MOVEL*/
+}
+h2{
+    color: #ff4c4c;
+}
+.containerBoas{
+    background-color: #fff;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    text-align: center;
+    
+}
+nav ul li a.active::after {
+    content: "▼";
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px; /* Ajuste o tamanho da seta conforme necessário */
+    color: #009ac0; /* Cor da seta, pode ser ajustada conforme a necessidade */
+}
+
+
+form {
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    
+    
+    
+  }
+  form input {
+    
+    width: 300px;
+    height: 25px;
+    margin-top: 10px;
+    
+    
+    
+    
+  }
+  
+ 
+/* styles.css */
+
+button.watched {
+    background-color: #009ac0; /* Cor de fundo para o botão assistido */
+    color: white; /* Cor do texto */
+}
+/* deixa as imagens  de filmes e series todas do mesmo tamanho pegando de um id especifico que nesse caso é o filmesimagem */
+#filmesimagem img {
+    width:150px;
+    height:215px ;
+}
+#seriesimagem img {
+    width:150px;
+    height:215px ;
+}
+#imagempequena img {
+    width:150px;
+    height:100px ;
+
+
+}
+#episodeButtonsSerie button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+
+
+
+/*Stylos botoes de proximo*/
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #009ac0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.pagination-container button:hover {
+    background-color: #555;
+}
+
+.pagination-container span {
+    color: white;
+    font-size: 18px;
+}
+
+
+</style>   
 
 </head>
 
@@ -24,13 +466,13 @@
     <header>
         <a href="Jogos.html"><img src="img/television.png"></a>
         <a href="Jogos.html">
-            <h1>COPA-AMERICA</h1>
+            <h1>COPA-AMÉRICA</h1>
         </a>
         <br>
         <nav>
             <ul>
                 <li><a id="menuHome" href="index.html">PANDOOX</a></li>
-                <li><a id="menuHome" href="indexTv.html">TV</a></li>
+                <li><a id="menuTV" href="indexTv.html">TV</a></li>
                 <li><a id="menuFilmes" href="inde_filme.html">FILMES</a></li>
                 <li><a id="menuSeries" href="indexSerie.html">SERIES</a></li>
                 <li><a id="menuNovelas" href="index_novela.html">NOVELAS</a></li>
@@ -40,7 +482,7 @@
                     <ul>
                         <li><a id="menuEuro" href="Jogos_Euro.html">EURO</a></li>
                         <li><a id="menuCopaAmerica" href="Jogos.html">COPA-AMÉRICA</a></li>
-                         <li><a id="menuBrasileirao" href="jogos_Brasileirao.html">BRASILEIRÂO</a></li>
+                        <li><a id="menuBrasileirao" href="jogos_Brasileirao.html">BRASILEIRÂO</a></li>
                         <li><a id="menuBrasileirao" href="Jogos_Libertadores.html">LIBERTADORES</a></li>
                     </ul>
                 </li>
